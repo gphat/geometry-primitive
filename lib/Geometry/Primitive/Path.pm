@@ -29,10 +29,10 @@ has 'primitives' => (
 );
 
 sub line_to {
-    my ($self, $point);
+    my ($self, $point) = @_;
 
     $self->add_primitive(Geometry::Primitive::Line->new(
-            point_start => $self->current_position(),
+            point_start => $self->current_point(),
             point_end => $point
     ));
     $self->current_point($point);
