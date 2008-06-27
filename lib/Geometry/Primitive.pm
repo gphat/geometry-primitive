@@ -3,7 +3,8 @@ use Moose;
 
 our $VERSION = '0.01';
 
-
+1;
+__END__
 =head1 NAME
 
 Geometry::Primitive - Primitive Geometry Entities
@@ -68,8 +69,3 @@ L<http://www.iinteractive.com>
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
-
-
-=cut
-
-1;
