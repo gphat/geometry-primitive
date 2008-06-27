@@ -13,19 +13,25 @@ has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
 has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point', required => 1 );
 has 'width' => ( is => 'rw', isa => 'Num', required => 1 );
 
+sub area {
+    my ($self) = @_;
+
+    return $self->height * $self->width;
+}
+
 sub get_points {
     my ($self) = @_;
 
     my @points;
     push(@points, $self->origin());
     push(@points, Geometry::Primitive::Point->new(
-        $self->origin->x + $self->width, $self->origin->y
+        x => $self->origin->x + $self->width, y => $self->origin->y
     ));
-    push(@points, Geoemetry::Primitive::Point->new(
-        $self->origin->x, $self->origin->y + $self->height
+    push(@points, Geometry::Primitive::Point->new(
+        x => $self->origin->x, y => $self->origin->y + $self->height
     ));
-    push(@points, Geoemetry::Primitive::Point->new(
-        $self->origin->x + $self->width, $self->origin->y + $self->height
+    push(@points, Geometry::Primitive::Point->new(
+        x => $self->origin->x + $self->width, y => $self->origin->y + $self->height
     ));
 
     return \@points
