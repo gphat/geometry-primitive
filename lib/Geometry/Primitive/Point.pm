@@ -1,6 +1,8 @@
 package Geometry::Primitive::Point;
 use Moose;
 
+extends 'Geometry::Primitive';
+
 with 'Geometry::Primitive::Equal';
 
 has 'x' => ( is => 'rw', isa => 'Num' );
@@ -44,6 +46,10 @@ Creates a new Geometry::Primitive::Point.
 =head2 Instance Methods
 
 =over 4
+
+=item I<equal_to>
+
+Compares this point to another.
 
 =item I<x>
 

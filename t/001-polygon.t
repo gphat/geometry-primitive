@@ -14,6 +14,6 @@ my $point3 = Geometry::Primitive::Point->new(x => 5, y => 6);
 $poly->add_point($point3);
 
 cmp_ok($poly->count_points(), '==', 3, 'point count');
-ok($poly->get_point(0)->equal_to($point1), 'get point 1');
+ok($poly->get_point_at(0)->equal_to($point1), 'get point 1');
 $poly->clear_points();
 cmp_ok($poly->count_points, '==', 0, 'cleared points');

@@ -1,7 +1,8 @@
 package Geometry::Primitive;
+use Moose;
 
-use warnings;
-use strict;
+our $VERSION = '0.01';
+
 
 =head1 NAME
 
@@ -11,46 +12,47 @@ Geometry::Primitive - Primitive Geometry Entities
 
 Version 0.01
 
-=cut
-
-our $VERSION = '0.01';
-
-
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+Geometry::Primitive is a device and library agnostic system for representing
+geometric entities such as points, lines and shapes.  It provides simple
+objects and many convenience methods you would expect for a geometry library.
 
-Perhaps a little code snippet.
+    use Geometry::Primitive::Point;
 
-    use Geometry::Primitive;
-
-    my $foo = Geometry::Primitive->new();
+    my $foo = Geometry::Primitive::Point->new(x => 1, y => 3);
     ...
 
-=head1 EXPORT
+=head1 DISCLAIMER
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
+I'm not a math guy. I hate math.  I will likely learn a lot in the process
+of making this library. If you are a math person you will probably look at
+this and find many things missing or wrong. Patches are encouraged. I will
+likely find that I've done something completely wrong having taken geometry
+over 10 years ago.  C'est la vie.
 
-=head1 FUNCTIONS
+=head1 ENTITIES
 
-=head2 function1
+=over 4
 
-=cut
+=item L<Point|Geometry::Primitive::Point>
 
-sub function1 {
-}
+=item L<Line|Geometry::Primitive::Line>
 
-=head2 function2
+=item L<Polygon|Geometry::Primitive::Polygon>
 
-=cut
+=item L<Arc|Geometry::Primitive::Arc>
 
-sub function2 {
-}
+=back
 
 =head1 AUTHOR
 
 Cory Watson, C<< <cory.watson at iinteractive.com> >>
+
+=head1 ACKNOWLEDGEMENTS
+
+Many of the ideas here come from my experience using the Cairo library.  It is
+entirely possible that 
 
 =head1 BUGS
 
@@ -70,4 +72,4 @@ under the same terms as Perl itself.
 
 =cut
 
-1; # End of Geometry::Primitive
+1;

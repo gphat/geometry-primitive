@@ -31,11 +31,11 @@ Geometry::Primitive::Equal is a Moose role for equality.
 
 =head1 METHODS
 
+=over 4
+
 =item I<equal_to>
 
 Implement this.
-
-=back
 
 =item I<not_equal_to>
 

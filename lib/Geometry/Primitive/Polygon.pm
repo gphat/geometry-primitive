@@ -3,6 +3,10 @@ use Moose;
 
 use MooseX::AttributeHelpers;
 
+extends 'Geometry::Primitive';
+
+with 'Geometry::Primitive::Shape';
+
 has 'points' => (
     metaclass => 'Collection::Array',
     is => 'rw',
@@ -12,9 +16,15 @@ has 'points' => (
         'push' => 'add_point',
         'clear' => 'clear_points',
         'count' => 'count_points',
-        'get' => 'get_point'
+        'get' => 'get_point_at'
     }
 );
+
+sub get_points {
+    my ($self) = @_;
+
+    return $self->points();
+}
 
 no Moose;
 1;
@@ -27,7 +37,7 @@ Geometry::Primitive::Polygon
 
 =head1 DESCRIPTION
 
-Geometry::Primitive::Point represents a two dimensional figure bounded by a
+Geometry::Primitive::Polygon represents a two dimensional figure bounded by a
 series of points that represent a closed path.
 
 =head1 SYNOPSIS
@@ -66,9 +76,13 @@ Clears all points from this polygon.
 
 =item I<count_points>
 
-Returns the number that bound this polygon.
+Returns the number of points that bound this polygon.
 
-=item I<get_point>
+=item I<get_points>
+
+Returns all the points in this Polygon.  Required by Shape.
+
+=item I<get_point_at>
 
 Returns the point at the specified offset.
 

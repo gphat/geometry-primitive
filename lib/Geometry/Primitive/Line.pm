@@ -1,28 +1,32 @@
 package Geometry::Primitive::Line;
 use Moose;
 
-has 'point1' => (
+extends 'Geometry::Primitive';
+
+has 'point_start' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point'
 );
 
-has 'point2' => (
+has 'point_end' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point'
 );
+
+#TODO Needs a get points, but isn't a shape!
 
 sub slope {
     my ($self) = @_;
 
-    return ($self->point2->x - $self->point1->x)
-        / ($self->point2->y - $self->point1->y);
+    return ($self->point_end->x - $self->point_start->x)
+        / ($self->point_end->y - $self->point_start->y);
 }
 
 sub length {
     my ($self) = @_;
 
-    return sqrt(($self->point2->x - $self->point1->x) ** 2
-        + ($self->point2->y - $self->point1->y) ** 2);
+    return sqrt(($self->point_end->x - $self->point_start->x) ** 2
+        + ($self->point_end->y - $self->point_start->y) ** 2);
 }
 
 no Moose;
@@ -43,8 +47,8 @@ Geometry::Primitive::Line represents a straight curve defined by two points.
   use Geometry::Primitive::Polygon;
 
   my $poly = Geometry::Primitive::Polygon->new();
-  $poly->point1($point1);
-  $poly->point2($point2);
+  $poly->point_start($point1);
+  $poly->point_end($point2);
 
 =head1 METHODS
 
@@ -62,13 +66,21 @@ Creates a new Geometry::Primitive::Polygon
 
 =over 4
 
-=item I<point1>
+=item I<length>
 
-Set/Get the first point on the line.
+Get the length of the line.
 
-=item I<point2>
+=item I<point_start>
 
-Set/Get the first point on the line.
+Set/Get the start point of the line.
+
+=item I<point_end>
+
+Set/Get the end point of the line.
+
+=item I<slope>
+
+Get the slope of the line.
 
 =back
 

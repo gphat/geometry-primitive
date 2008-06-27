@@ -7,8 +7,8 @@ BEGIN {
 
 my $line = Geometry::Primitive::Line->new();
 my $point1 = Geometry::Primitive::Point->new(x => 1, y => 2);
-$line->point1($point1);
+$line->point_start($point1);
 my $point2 = Geometry::Primitive::Point->new(x => 3, y => 4);
-$line->point2($point2);
+$line->point_end($point2);
 cmp_ok($line->slope(), '==', 1, 'slope');
 cmp_ok($line->length(), '==', sqrt(8), 'length');
