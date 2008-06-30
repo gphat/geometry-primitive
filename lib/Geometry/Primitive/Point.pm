@@ -3,7 +3,7 @@ use Moose;
 
 extends 'Geometry::Primitive';
 
-with 'Geometry::Primitive::Equal';
+with qw(Geometry::Primitive::Equal MooseX::Clone);
 
 has 'x' => ( is => 'rw', isa => 'Num' );
 has 'y' => ( is => 'rw', isa => 'Num' );
@@ -12,6 +12,12 @@ sub equal_to {
     my ($self, $other) = @_;
 
     return (($self->x == $other->x) && $self->y == $other->y);
+}
+
+sub to_string {
+    my ($self) = @_;
+
+    return $self->x.','.$self->y;
 }
 
 no Moose;
