@@ -3,7 +3,7 @@ use Moose;
 
 extends 'Geometry::Primitive';
 
-with qw(Geometry::Primitive::Equal MooseX::Clone);
+with qw(Geometry::Primitive::Equal);
 
 has 'x' => ( is => 'rw', isa => 'Num' );
 has 'y' => ( is => 'rw', isa => 'Num' );

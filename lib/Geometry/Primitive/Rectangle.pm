@@ -76,6 +76,10 @@ Creates a new Geometry::Primitive::Rectangle
 
 =over 4
 
+=item I<area>
+
+Returns the area of this rectangle.
+
 =item I<get_points>
 
 Get the points that make up this Rectangle.
