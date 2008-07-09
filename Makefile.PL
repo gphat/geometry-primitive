@@ -2,7 +2,7 @@ use inc::Module::Install;
 
 name     'Geometry-Primitive';
 all_from 'lib/Geometry/Primitive.pm';
-author   'Cory Watson <cory.watson@iinteractive.com>';
+author   'Cory Watson <gphat@cpan.org>';
 
 build_requires 'Test::More';
 

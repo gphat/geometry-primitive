@@ -86,7 +86,9 @@ Get the slope of the line.
 
 =head1 AUTHOR
 
-Cory Watson <cory.watson@iinteractive.com>
+Cory Watson <gphat@cpan.org>
+
+Infinity Interactive, L<http://www.iinteractive.com>
 
 =head1 COPYRIGHT & LICENSE
 

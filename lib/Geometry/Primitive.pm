@@ -2,6 +2,7 @@ package Geometry::Primitive;
 use Moose;
 
 our $VERSION = '0.01';
+our $AUTHORITY = 'cpan:GPHAT';
 
 1;
 __END__
@@ -17,7 +18,7 @@ Version 0.01
 
 Geometry::Primitive is a device and library agnostic system for representing
 geometric entities such as points, lines and shapes.  It provides simple
-objects and many convenience methods you would expect for a geometry library.
+objects and many convenience methods you would expect from a geometry library.
 
     use Geometry::Primitive::Point;
 
@@ -25,6 +26,9 @@ objects and many convenience methods you would expect for a geometry library.
     ...
 
 =head1 DISCLAIMER
+
+This module is not complete.  The functionality that exists was created to
+satisfy the needs of some other modules.  I B<welcome> additional features!
 
 I'm not a math guy. I hate math.  I will likely learn a lot in the process
 of making this library. If you are a math person you will probably look at
@@ -36,19 +40,23 @@ over 10 years ago.  C'est la vie.
 
 =over 4
 
+=item L<Arc|Geometry::Primitive::Arc>
+
 =item L<Point|Geometry::Primitive::Point>
 
 =item L<Line|Geometry::Primitive::Line>
 
 =item L<Polygon|Geometry::Primitive::Polygon>
 
-=item L<Arc|Geometry::Primitive::Arc>
+=item L<Rectangle|Geometry::Primitive::Rectangle>
 
 =back
 
 =head1 AUTHOR
 
-Cory Watson, C<< <cory.watson at iinteractive.com> >>
+Cory Watson, C<< <gphat@cpan.org> >>
+
+Infinity Interactive, L<http://www.iinteractive.com>
 
 =head1 ACKNOWLEDGEMENTS
 

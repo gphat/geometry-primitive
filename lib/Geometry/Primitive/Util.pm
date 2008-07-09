@@ -1,9 +1,20 @@
 package Geometry::Primitive::Util;
-use Moose;
+
+BEGIN {
+    use Exporter;
+
+    use vars qw(@EXPORT @EXPORT_OK %EXPORT_TAGS);
+
+    @ISA = qw(Exporter);
+    @EXPORT = qw();
+    @EXPORT_OK = qw(
+        PI
+    );
+    %EXPORT_TAGS = qw();
+}
 
 use constant PI => 4 * atan2(1, 1);
 
-no Moose;
 1;
 
 __END__
@@ -20,7 +31,7 @@ Geometry::Primitive::Util is a collection of utility methods and constants.
 
   use Geometry::Primitive::Util;
 
-  print "pi is ".$Geometry::Primitive::Util::PI."\n";
+  print "pi is ".Geometry::Primitive::Util::PI."\n";
   # No need to close the path, it's handled automatically
 
 =head1 CONSTANTS
@@ -43,7 +54,9 @@ The value of pi.
 
 =head1 AUTHOR
 
-Cory Watson <cory.watson@iinteractive.com>
+Cory Watson <gphat@cpan.org>
+
+Infinity Interactive, L<http://www.iinteractive.com>
 
 =head1 COPYRIGHT & LICENSE
 

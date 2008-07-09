@@ -57,6 +57,10 @@ Creates a new Geometry::Primitive::Point.
 
 Compares this point to another.
 
+=item I<to_string>
+
+Return this point as a string $x,$y
+
 =item I<x>
 
 Set/Get the X value.
@@ -69,7 +73,9 @@ Set/Get the Y value.
 
 =head1 AUTHOR
 
-Cory Watson <cory.watson@iinteractive.com>
+Cory Watson <gphat@cpan.org>
+
+Infinity Interactive, L<http://www.iinteractive.com>
 
 =head1 COPYRIGHT & LICENSE
 
