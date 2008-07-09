@@ -60,8 +60,7 @@ Infinity Interactive, L<http://www.iinteractive.com>
 
 =head1 ACKNOWLEDGEMENTS
 
-Many of the ideas here come from my experience using the Cairo library.  It is
-entirely possible that 
+Many of the ideas here come from my experience using the Cairo library.
 
 =head1 BUGS
 
