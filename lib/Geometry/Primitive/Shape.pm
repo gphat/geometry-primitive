@@ -20,25 +20,17 @@ Geometry::Primitive::Shape is a geometric shape.
 
   with 'Geometry::Primitive::Shape';
 
-  sub contains_point {
+  sub get_points {
       my ($self, $point) = @_;
       
-      # determine if that point is inside this shape
+      # return an array of points that define this shape
   }
 
 =head1 METHODS
 
 =over 4
 
-=item I<contains>
-
-Implement this.
-
-=item I<get_bounds>
-
-Implement this.
-
-=item I<get_path>
+=item I<get_points>
 
 Implement this.
 

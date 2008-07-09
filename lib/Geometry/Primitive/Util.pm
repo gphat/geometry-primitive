@@ -29,10 +29,9 @@ Geometry::Primitive::Util is a collection of utility methods and constants.
 
 =head1 SYNOPSIS
 
-  use Geometry::Primitive::Util;
+  use Geometry::Primitive::Util qw(PI);
 
-  print "pi is ".Geometry::Primitive::Util::PI."\n";
-  # No need to close the path, it's handled automatically
+  print "pi is ".PI."\n";
 
 =head1 CONSTANTS
 
@@ -43,10 +42,6 @@ Geometry::Primitive::Util is a collection of utility methods and constants.
 The value of pi.
 
 =back
-
-=head1 METHODS
-
-=head2 Class Methods
 
 =over 4
 

@@ -44,11 +44,11 @@ Geometry::Primitive::Line represents a straight curve defined by two points.
 
 =head1 SYNOPSIS
 
-  use Geometry::Primitive::Polygon;
+  use Geometry::Primitive::Line;
 
-  my $poly = Geometry::Primitive::Polygon->new();
-  $poly->point_start($point1);
-  $poly->point_end($point2);
+  my $line = Geometry::Primitive::Line->new();
+  $line->point_start($point1);
+  $line->point_end($point2);
 
 =head1 METHODS
 
@@ -58,7 +58,7 @@ Geometry::Primitive::Line represents a straight curve defined by two points.
 
 =item I<new>
 
-Creates a new Geometry::Primitive::Polygon
+Creates a new Geometry::Primitive::Line
 
 =back
 
