@@ -1,4 +1,4 @@
-use inc::Module::Install;
+use inc::Module::Install 0.75;
 
 name     'Geometry-Primitive';
 all_from 'lib/Geometry/Primitive.pm';
