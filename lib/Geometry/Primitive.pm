@@ -1,7 +1,7 @@
 package Geometry::Primitive;
 use Moose;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 our $AUTHORITY = 'cpan:GPHAT';
 
 1;
@@ -9,10 +9,6 @@ __END__
 =head1 NAME
 
 Geometry::Primitive - Primitive Geometry Entities
-
-=head1 VERSION
-
-Version 0.01
 
 =head1 SYNOPSIS
 
