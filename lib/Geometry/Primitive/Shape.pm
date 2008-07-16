@@ -5,6 +5,8 @@ use Moose::Role;
 # requires 'get_bounds';
 requires 'get_points';
 
+has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
+
 no Moose;
 1;
 __END__

@@ -10,7 +10,6 @@ extends 'Geometry::Primitive';
 with 'Geometry::Primitive::Shape';
 
 has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
-has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point', required => 1 );
 has 'width' => ( is => 'rw', isa => 'Num', required => 1 );
 
 sub area {

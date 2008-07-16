@@ -1,5 +1,9 @@
 Revision history for Geometry-Primitive
 
+0.04
+  - Add Circle
+  - Move 'origin' attribute from Rectangle to Shape and make it !required
+
 0.03
   - Add MI version because Yuval yelled at me
   - Add degrees_to_radians and radians_to_degrees to Util
