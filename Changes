@@ -2,6 +2,8 @@ Revision history for Geometry-Primitive
 
 0.03
   - Add MI version because Yuval yelled at me
+  - Add degrees_to_radians and radians_to_degrees to Util
+  
 0.02    2008-07-09
   - Package fixes, no changes
 
