@@ -33,7 +33,7 @@ __END__
 
 =head1 NAME
 
-Geometry::Primitive::Polygon
+Geometry::Primitive::Util
 
 =head1 DESCRIPTION
 
