@@ -8,8 +8,8 @@ build_requires 'Test::More';
 
 test_requires 'Pod::Coverage::Moose';
 
-requires 'Moose';
-requires 'MooseX::AttributeHelpers';
+requires 'Moose' => '0.54';
+requires 'MooseX::AttributeHelpers' => '0.12';
 
 auto_install;
 
