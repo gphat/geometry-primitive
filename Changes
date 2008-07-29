@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.05
+  - Add MooseX::Clone for Point (for now)
+
 0.04
   - Add Circle
   - Move 'origin' attribute from Rectangle to Shape and make it !required
