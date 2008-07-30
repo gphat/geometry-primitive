@@ -9,6 +9,8 @@ has 'angle_start' => ( is => 'rw', isa => 'Num' );
 has 'angle_end' => ( is => 'rw', isa => 'Num' );
 has 'radius' => ( is => 'rw', isa => 'Num' );
 
+__PACKAGE__->meta->make_immutable;
+
 no Moose;
 1;
 

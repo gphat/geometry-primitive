@@ -20,6 +20,8 @@ sub to_string {
     return $self->x.','.$self->y;
 }
 
+__PACKAGE__->meta->make_immutable;
+
 no Moose;
 1;
 

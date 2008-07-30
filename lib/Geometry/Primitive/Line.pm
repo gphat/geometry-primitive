@@ -29,6 +29,8 @@ sub length {
         + ($self->point_end->y - $self->point_start->y) ** 2);
 }
 
+__PACKAGE__->meta->make_immutable;
+
 no Moose;
 1;
 

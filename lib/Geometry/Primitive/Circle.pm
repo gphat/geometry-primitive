@@ -14,6 +14,8 @@ sub diameter {
     return $self->radius * 2;
 }
 
+__PACKAGE__->meta->make_immutable;
+
 no Moose;
 1;
 

@@ -26,6 +26,8 @@ sub get_points {
     return $self->points();
 }
 
+__PACKAGE__->meta->make_immutable;
+
 no Moose;
 1;
 
