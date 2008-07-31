@@ -8,6 +8,7 @@ Revision history for Geometry-Primitive
   - Polygon: rename get_point_at to get_point
   - Point: add string overload
   - Circle: Add area and circumference
+  - Make some attributes required
 
 0.05
   - Add MooseX::Clone for Point (for now)

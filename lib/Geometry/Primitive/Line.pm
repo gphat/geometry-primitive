@@ -7,12 +7,14 @@ with 'Geometry::Primitive::Shape';
 
 has 'start' => (
     is => 'rw',
-    isa => 'Geometry::Primitive::Point'
+    isa => 'Geometry::Primitive::Point',
+    required => 1
 );
 
 has 'end' => (
     is => 'rw',
-    isa => 'Geometry::Primitive::Point'
+    isa => 'Geometry::Primitive::Point',
+    required => 1
 );
 
 sub contains_point {
@@ -39,11 +41,11 @@ sub length {
 }
 
 sub point_end {
-    my ($self) = @_; return $self->start;
+    my ($self) = @_; return $self->end;
 }
 
 sub point_start {
-    my ($self) = @_; return $self->end;
+    my ($self) = @_; return $self->start;
 }
 
 sub slope {
