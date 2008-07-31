@@ -1,5 +1,14 @@
 Revision history for Geometry-Primitive
 
+0.06
+  - Shape: removed get_points in favor of point_start/point_end
+  - Arc: Add length and get_point_at_angle
+  - Line: rename point_start/point_end to start/end
+  - Line: added contains_point, length and y_intercept
+  - Polygon: rename get_point_at to get_point
+  - Point: add string overload
+  - Circle: Add area and circumference
+
 0.05
   - Add MooseX::Clone for Point (for now)
   - Add make_immutable to er'thang

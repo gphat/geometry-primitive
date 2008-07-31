@@ -5,11 +5,50 @@ use MooseX::AttributeHelpers;
 
 extends 'Geometry::Primitive';
 
+with 'Geometry::Primitive::Shape';
+
 has 'angle_start' => ( is => 'rw', isa => 'Num' );
 has 'angle_end' => ( is => 'rw', isa => 'Num' );
+has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
 has 'radius' => ( is => 'rw', isa => 'Num' );
 
 __PACKAGE__->meta->make_immutable;
+
+# Area of a sector, if it's ever needed...
+# sub area {
+#     my ($self) = @_;
+# 
+#     return (($self->radius**2 * ($self->angle_end - $self->angle_start)) / 2
+#     );
+# }
+sub get_point_at_angle {
+    my ($self, $angle) = @_;
+
+    return undef if(($angle < $self->angle_start) || ($angle > $self->angle_end));
+
+    return Geometry::Primitive::Point->new(
+        x => $self->origin->x + ($self->radius * cos($angle)),
+        y => $self->origin->y + ($self->radius * sin($angle))
+    );
+}
+
+sub length {
+    my ($self) = @_;
+
+    return $self->radius * ($self->angle_end - $self->angle_start);
+}
+
+sub point_end {
+    my ($self) = @_;
+
+    return $self->get_point_at_angle($self->angle_end);
+}
+
+sub point_start {
+    my ($self) = @_;
+
+    return $self->get_point_at_angle($self->angle_start);
+}
 
 no Moose;
 1;
@@ -29,8 +68,8 @@ Geometry::Primitive::Arc represents a closed segment of a curve.
   use Geometry::Primitive::Arc;
 
   my $arc = Geometry::Primitive::Arc->new(
-      angle_start => 45,
-      angle_end => 65,
+      angle_start => 0,
+      angle_end => 1.57079633,
       radius => 15
   );
 
@@ -52,11 +91,28 @@ Creates a new Geometry::Primitive::Arc
 
 =item I<angle_start>
 
-The starting angle for this arc.
+The starting angle for this arc in radians.
 
 =item I<angle_end>
 
-The ending angle for this arc.
+The ending angle for this arc in radians.
+
+=item I<length>
+
+Returns the length of this arc.
+
+=item I<get_point_at_angle>
+
+Given angle in radians returns the point at that angle on this arc.  Returns
+undef if the angle falls outside this arc's range.
+
+=item I<point_end>
+
+Get the end point.  Provided for Shape role.
+
+=item I<point_start>
+
+Get the start point.  Provided for Shape role.
 
 =item I<radius>
 

@@ -10,6 +10,7 @@ extends 'Geometry::Primitive';
 with 'Geometry::Primitive::Shape';
 
 has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
+has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
 has 'width' => ( is => 'rw', isa => 'Num', required => 1 );
 
 sub area {
@@ -22,7 +23,7 @@ sub get_points {
     my ($self) = @_;
 
     my @points;
-    push(@points, $self->origin());
+    push(@points, $self->origin);
     push(@points, Geometry::Primitive::Point->new(
         x => $self->origin->x + $self->width, y => $self->origin->y
     ));
@@ -34,6 +35,14 @@ sub get_points {
     ));
 
     return \@points
+}
+
+sub point_end {
+    my ($self) = @_; return $self->origin;
+}
+
+sub point_start {
+    my ($self) = @_; return $self->origin;
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -84,6 +93,14 @@ Returns the area of this rectangle.
 =item I<get_points>
 
 Get the points that make up this Rectangle.
+
+=item I<point_end>
+
+Get the end point.  Returns the origin. Provided for Shape role.
+
+=item I<point_start>
+
+Get the start point.  Returns the origin.  Provided for Shape role.
 
 =item I<width>
 

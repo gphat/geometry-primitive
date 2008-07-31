@@ -3,10 +3,23 @@ use Moose;
 
 use MooseX::AttributeHelpers;
 
+use Geometry::Primitive::Util qw(PI);
+
 extends 'Geometry::Primitive::Arc';
 
 has '+angle_start' => ( default => sub { 0 } );
 has '+angle_end' => ( default => sub { 360 } );
+
+sub area {
+    my ($self) = @_;
+    return $self->radius**2 * PI;
+};
+
+sub circumference {
+    my ($self) = @_;
+
+    return $self->diameter * PI;
+}
 
 sub diameter {
     my ($self) = @_;
@@ -54,9 +67,21 @@ Creates a new Geometry::Primitive::Arc
 
 =over 4
 
+=item I<area>
+
+Returns the area of this circle.
+
+=item I<circumference>
+
+Returns the circumference of this circle.
+
 =item I<diameter>
 
 Returns the diameter of this circle
+
+=item I<origin>
+
+Set/Get the origin of this circle.
 
 =item I<radius>
 

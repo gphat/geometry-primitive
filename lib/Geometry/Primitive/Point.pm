@@ -5,6 +5,8 @@ extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Equal MooseX::Clone);
 
+use overload ('""' => 'to_string');
+
 has 'x' => ( is => 'rw', isa => 'Num' );
 has 'y' => ( is => 'rw', isa => 'Num' );
 

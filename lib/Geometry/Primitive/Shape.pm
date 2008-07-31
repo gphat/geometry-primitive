@@ -1,11 +1,8 @@
 package Geometry::Primitive::Shape;
 use Moose::Role;
 
-# requires 'contains_point';
-# requires 'get_bounds';
-requires 'get_points';
-
-has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
+requires 'point_end';
+requires 'point_start';
 
 no Moose;
 1;
@@ -22,19 +19,13 @@ Geometry::Primitive::Shape is a geometric shape.
 
   with 'Geometry::Primitive::Shape';
 
-  sub get_points {
-      my ($self, $point) = @_;
-      
-      # return an array of points that define this shape
-  }
+  has 'point_end' => '
 
 =head1 METHODS
 
 =over 4
 
-=item I<get_points>
-
-Implement this.
+=item 
 
 =back
 
