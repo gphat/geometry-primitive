@@ -7,10 +7,10 @@ extends 'Geometry::Primitive';
 
 with 'Geometry::Primitive::Shape';
 
-has 'angle_start' => ( is => 'rw', isa => 'Num' );
-has 'angle_end' => ( is => 'rw', isa => 'Num' );
+has 'angle_start' => ( is => 'rw', isa => 'Num', required => 1 );
+has 'angle_end' => ( is => 'rw', isa => 'Num', required => 1 );
 has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
-has 'radius' => ( is => 'rw', isa => 'Num' );
+has 'radius' => ( is => 'rw', isa => 'Num', required => 1 );
 
 __PACKAGE__->meta->make_immutable;
 
