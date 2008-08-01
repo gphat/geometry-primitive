@@ -10,6 +10,7 @@ Revision history for Geometry-Primitive
   - Circle: Add area and circumference
   - Make some attributes required
   - More MX::Clone lovin'
+  - Add to_string and "" overload to Line
 
 0.05
   - Add MooseX::Clone for Point (for now)
