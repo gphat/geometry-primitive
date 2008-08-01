@@ -137,6 +137,10 @@ Get the slope of the line.
 
 Set/Get the start point of the line.
 
+=item I<to_string>
+
+Guess!
+
 =item I<y_intercept>
 
 Returns the Y intercept of this line.

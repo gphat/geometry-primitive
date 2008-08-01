@@ -3,9 +3,9 @@ use Moose;
 
 use MooseX::AttributeHelpers;
 
-extends qw(Geometry::Primitive MooseX::Clone);
+extends 'Geometry::Primitive';
 
-with 'Geometry::Primitive::Shape';
+with qw(Geometry::Primitive::Shape MooseX::Clone);
 
 has 'points' => (
     metaclass => 'Collection::Array',
