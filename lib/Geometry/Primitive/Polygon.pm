@@ -3,7 +3,7 @@ use Moose;
 
 use MooseX::AttributeHelpers;
 
-extends 'Geometry::Primitive';
+extends qw(Geometry::Primitive MooseX::Clone);
 
 with 'Geometry::Primitive::Shape';
 
@@ -11,6 +11,7 @@ has 'points' => (
     metaclass => 'Collection::Array',
     is => 'rw',
     isa => 'ArrayRef[Geometry::Primitive::Point]',
+    traits => [qw(Clone)],
     default => sub { [] },
     provides => {
         'push' => 'add_point',

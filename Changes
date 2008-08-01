@@ -9,6 +9,7 @@ Revision history for Geometry-Primitive
   - Point: add string overload
   - Circle: Add area and circumference
   - Make some attributes required
+  - More MX::Clone lovin'
 
 0.05
   - Add MooseX::Clone for Point (for now)

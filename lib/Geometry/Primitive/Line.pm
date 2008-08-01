@@ -3,7 +3,7 @@ use Moose;
 
 extends 'Geometry::Primitive';
 
-with 'Geometry::Primitive::Shape';
+with qw(Geometry::Primitive::Shape MooseX::Clone);
 
 has 'start' => (
     is => 'rw',

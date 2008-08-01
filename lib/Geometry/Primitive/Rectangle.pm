@@ -7,7 +7,7 @@ use Geometry::Primitive::Point;
 
 extends 'Geometry::Primitive';
 
-with 'Geometry::Primitive::Shape';
+with qw(Geometry::Primitive::Shape MooseX::Clone);
 
 has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
 has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );

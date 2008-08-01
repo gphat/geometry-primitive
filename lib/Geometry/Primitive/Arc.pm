@@ -5,7 +5,7 @@ use MooseX::AttributeHelpers;
 
 extends 'Geometry::Primitive';
 
-with 'Geometry::Primitive::Shape';
+with qw(Geometry::Primitive::Shape MooseX::Clone);
 
 has 'angle_start' => ( is => 'rw', isa => 'Num', required => 1 );
 has 'angle_end' => ( is => 'rw', isa => 'Num', required => 1 );
