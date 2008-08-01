@@ -26,7 +26,7 @@ objects and many convenience methods you would expect from a geometry library.
 This module is not complete.  The functionality that exists was created to
 satisfy the needs of some other modules.  I B<welcome> additional features!
 
-I'm not a math guy. I hate math.  I will likely learn a lot in the process
+I'm not a math guy. I hate math. I will likely learn a lot in the process
 of making this library. If you are a math person you will probably look at
 this and find many things missing or wrong. Patches are encouraged. I will
 likely find that I've done something completely wrong having taken geometry

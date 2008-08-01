@@ -5,6 +5,8 @@ extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone);
 
+use overload ('""' => 'to_string');
+
 has 'start' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point',
@@ -53,6 +55,12 @@ sub slope {
 
     return ($self->end->x - $self->start->x)
         / ($self->end->y - $self->start->y);
+}
+
+sub to_string {
+    my ($self) = @_;
+
+    return $self->start->to_string." - ".$self->end->to_string;
 }
 
 sub y_intercept {
