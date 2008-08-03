@@ -27,11 +27,11 @@ sub diameter {
     return $self->radius * 2;
 }
 
-sub grow {
+override('grow', sub {
     my ($self, $amount) = @_;
 
-    $self-> radius($self->radius + ($amount / 2));
-}
+    $self->radius($self->radius + ($amount / 2));
+});
 
 __PACKAGE__->meta->make_immutable;
 

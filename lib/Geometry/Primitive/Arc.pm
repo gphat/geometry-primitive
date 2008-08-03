@@ -32,6 +32,12 @@ sub get_point_at_angle {
     );
 }
 
+sub grow {
+    my ($self, $amount) = @_;
+
+    $self->radius($self->radius + $amount);
+}
+
 sub length {
     my ($self) = @_;
 
@@ -105,6 +111,10 @@ Returns the length of this arc.
 
 Given angle in radians returns the point at that angle on this arc.  Returns
 undef if the angle falls outside this arc's range.
+
+=item I<grow>
+
+Increases the radius by the supplied ammount.
 
 =item I<point_end>
 

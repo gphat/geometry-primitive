@@ -40,8 +40,8 @@ sub get_points {
 sub grow {
     my ($self, $amount) = @_;
 
-    $self->width($self->width + $amount)
-    $self->height($self->height + $amount)
+    $self->width($self->width + $amount);
+    $self->height($self->height + $amount);
 }
 
 sub point_end {
