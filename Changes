@@ -3,6 +3,7 @@ Revision history for Geometry-Primitive
 0.07
   - Add grow method to Shape role and implementations
   - Fix line slope calculation
+  - Line: add is_perpendicular and is_parallel
 
 0.06
   - Shape: removed get_points in favor of point_start/point_end
