@@ -4,6 +4,7 @@ Revision history for Geometry-Primitive
   - Add grow method to Shape role and implementations
   - Fix line slope calculation
   - Line: add is_perpendicular and is_parallel
+  - Arc: don't check angles in get_point_at_angle, allow for negative arcs
 
 0.06
   - Shape: removed get_points in favor of point_start/point_end

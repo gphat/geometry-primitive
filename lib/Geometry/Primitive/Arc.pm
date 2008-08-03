@@ -24,8 +24,6 @@ __PACKAGE__->meta->make_immutable;
 sub get_point_at_angle {
     my ($self, $angle) = @_;
 
-    return undef if(($angle < $self->angle_start) || ($angle > $self->angle_end));
-
     return Geometry::Primitive::Point->new(
         x => $self->origin->x + ($self->radius * cos($angle)),
         y => $self->origin->y + ($self->radius * sin($angle))
