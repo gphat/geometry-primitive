@@ -27,6 +27,12 @@ sub diameter {
     return $self->radius * 2;
 }
 
+sub grow {
+    my ($self, $amount) = @_;
+
+    $self-> radius($self->radius + ($amount / 2));
+}
+
 __PACKAGE__->meta->make_immutable;
 
 no Moose;
@@ -78,6 +84,10 @@ Returns the circumference of this circle.
 =item I<diameter>
 
 Returns the diameter of this circle
+
+=item I<grow>
+
+Increases the diameter of the circle by the specified amount.
 
 =item I<origin>
 

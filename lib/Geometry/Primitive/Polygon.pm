@@ -21,6 +21,10 @@ has 'points' => (
     }
 );
 
+sub grow {
+    # Unimplemented, stub to pass role requirements.
+}
+
 sub point_end {
     my ($self) = @_;
 
@@ -87,13 +91,13 @@ Clears all points from this polygon.
 
 Returns the number of points that bound this polygon.
 
-=item I<get_points>
-
-Returns all the points in this Polygon.  Required by Shape.
-
 =item I<get_point>
 
 Returns the point at the specified offset.
+
+=item I<grow>
+
+Null-op.  I have no idea how to grow an entire polygon ;)
 
 =item I<point_end>
 

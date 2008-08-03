@@ -37,6 +37,13 @@ sub get_points {
     return \@points
 }
 
+sub grow {
+    my ($self, $amount) = @_;
+
+    $self->width($self->width + $amount)
+    $self->height($self->height + $amount)
+}
+
 sub point_end {
     my ($self) = @_; return $self->origin;
 }
@@ -93,6 +100,10 @@ Returns the area of this rectangle.
 =item I<get_points>
 
 Get the points that make up this Rectangle.
+
+=item I<grow ($amount)>
+
+Increase the hieght and width of this rectangle by the amount specified.
 
 =item I<point_end>
 

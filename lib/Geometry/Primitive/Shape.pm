@@ -1,6 +1,7 @@
 package Geometry::Primitive::Shape;
 use Moose::Role;
 
+requires 'grow';
 requires 'point_end';
 requires 'point_start';
 
@@ -25,7 +26,20 @@ Geometry::Primitive::Shape is a geometric shape.
 
 =over 4
 
-=item 
+=item I<grow>
+
+Increase the size of this shape by the amount specified.  Consult the shape
+implementation's documentation for this works.
+
+=item I<point_end>
+
+The end point of this shape.
+
+=item I<point_start>
+
+The starting point of this shape.
+
+
 
 =back
 

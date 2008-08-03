@@ -35,6 +35,15 @@ sub contains_point {
     return $expy == $point->y;
 }
 
+sub grow {
+    my ($self, $amount) = @_;
+
+    # my $end = $self->end;
+    # if($end->x == 0) {
+    # $self->end->x($self->end->x + $amount);
+    # $self->end->y($self->end->y + $amount);
+}
+
 sub length {
     my ($self) = @_;
 
@@ -53,8 +62,16 @@ sub point_start {
 sub slope {
     my ($self) = @_;
 
-    return ($self->end->x - $self->start->x)
-        / ($self->end->y - $self->start->y);
+    my $end = $self->end;
+    my $start = $self->start;
+    my $x = $end->x - $start->x;
+    my $y = $end->y - $start->y;
+
+    if($x == 0) {
+        return undef;
+    }
+
+    return $y / $x;
 }
 
 sub to_string {
@@ -116,6 +133,11 @@ object or an x y pair.
 =item I<end>
 
 Set/Get the end point of the line.
+
+=item I<grow>
+
+Increases the length of the line by adding the specified amount to the x and
+y of the endpoint.
 
 =item I<length>
 
