@@ -1,4 +1,4 @@
-use Test::More tests => 11;
+use Test::More tests => 14;
 
 BEGIN {
     use_ok('Geometry::Primitive::Point');
@@ -31,3 +31,16 @@ my $horiz = Geometry::Primitive::Line->new(
     end => Geometry::Primitive::Point->new( x => 5, y => 0 ),
 );
 cmp_ok($horiz->slope, '==', 0, 'slope of horizontal line');
+ok($horiz->is_perpendicular($vert), 'vert/horiz perpendicular');
+ok($vert->is_perpendicular($horiz), 'horiz/vert perpendicular');
+
+my $line1 = Geometry::Primitive::Line->new(
+    start => Geometry::Primitive::Point->new( x => 0, y => 1 ),
+    end => Geometry::Primitive::Point->new( x => 1, y => 0 ),
+);
+my $line2 = Geometry::Primitive::Line->new(
+    start => Geometry::Primitive::Point->new( x => 0, y => 0 ),
+    end => Geometry::Primitive::Point->new( x => 1, y => 1 ),
+);
+ok($line1->is_perpendicular($line2), 'perpendicular');
+

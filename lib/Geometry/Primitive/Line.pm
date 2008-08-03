@@ -35,13 +35,28 @@ sub contains_point {
     return $expy == $point->y;
 }
 
-sub grow {
-    my ($self, $amount) = @_;
+sub grow { }
 
-    # my $end = $self->end;
-    # if($end->x == 0) {
-    # $self->end->x($self->end->x + $amount);
-    # $self->end->y($self->end->y + $amount);
+sub is_parallel {
+    my ($self, $line) = @_;
+
+    return $line->slope == $self->slope;
+}
+
+sub is_perpendicular {
+    my ($self, $line) = @_;
+
+    my $slope = $self->slope;
+
+    # Deal with horizontal and vertical lines
+    if(!defined($slope)) {
+        return $line->slope == 0;
+    }
+    if($slope == 0) {
+        return !defined($line->slope);
+    }
+
+    return $line->slope == (-1 / $self->slope);
 }
 
 sub length {
@@ -136,8 +151,15 @@ Set/Get the end point of the line.
 
 =item I<grow>
 
-Increases the length of the line by adding the specified amount to the x and
-y of the endpoint.
+Does nothing, as I'm not show how.  Patches or hints welcome.
+
+=item I<is_parallel ($other_line)>
+
+Returns true if the supplied line is parallel to this one.
+
+=item I<is_perpendicular ($other_line)>
+
+Returns true if the supplied line is perpendicular to this one.
 
 =item I<length>
 
