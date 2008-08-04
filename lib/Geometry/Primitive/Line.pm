@@ -35,7 +35,8 @@ sub contains_point {
     return $expy == $point->y;
 }
 
-sub grow { }
+# Don't know how to do this atm.
+sub scale { }
 
 sub is_parallel {
     my ($self, $line) = @_;

@@ -16,19 +16,52 @@ has 'points' => (
     provides => {
         'push' => 'add_point',
         'clear' => 'clear_points',
-        'count' => 'count_points',
+        'count' => 'point_count',
         'get' => 'get_point'
     }
 );
 
-sub grow {
-    # Unimplemented, stub to pass role requirements.
+sub area {
+    my ($self) = @_;
+
+    # http://mathworld.wolfram.com/PolygonArea.html
+    my $area = 0;
+    my $last = $self->get_point(0);
+    for (my $i = 1; $i < $self->point_count; $i++) {
+        my $curr = $self->get_point($i);
+
+        $area += ($last->x * $curr->y) - ($curr->x * $last->y);
+        $last = $curr;
+    }
+
+    return abs($area / 2);
+}
+
+sub get_points_as_array {
+    my ($self) = @_;
+
+    my @points;
+    foreach my $p (@{ $self->points }) {
+        push(@points, [ $p->x, $p->y ]);
+    }
+
+    return \@points;
+}
+
+sub scale {
+    my ($self, $amount) = @_;
+
+    foreach my $p (@{ $self->points }) {
+        $p->x($p->x * $amount);
+        $p->y($p->y * $amount);
+    }
+
 }
 
 sub point_end {
     my ($self) = @_;
 
-    return $self->get_point($self->count_points - 1);
+    return $self->get_point($self->point_count - 1);
 }
 
 sub point_start {
@@ -79,6 +112,10 @@ Creates a new Geometry::Primitive::Polygon
 
 =over 4
 
+=item I<area>
+
+Area of this polygon.  Assumes it is non-self-intersecting.
+
 =item I<add_point>
 
 Add a point to this polygon.
@@ -87,17 +124,13 @@ Add a point to this polygon.
 
 Clears all points from this polygon.
 
-=item I<count_points>
+=item I<point_count>
 
 Returns the number of points that bound this polygon.
 
 =item I<get_point>
 
 Returns the point at the specified offset.
-
-=item I<grow>
-
-Null-op.  I have no idea how to grow an entire polygon ;)
 
 =item I<point_end>
 
@@ -106,6 +139,10 @@ Get the end point.  Provided for Shape role.
 =item I<point_start>
 
 Get the start point.  Provided for Shape role.
+
+=item I<scale ($amount)>
+
+Scale this this polygon by the supplied amount.
 
 =back
 

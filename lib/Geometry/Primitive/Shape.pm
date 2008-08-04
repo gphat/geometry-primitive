@@ -1,9 +1,9 @@
 package Geometry::Primitive::Shape;
 use Moose::Role;
 
-requires 'grow';
 requires 'point_end';
 requires 'point_start';
+requires 'scale';
 
 no Moose;
 1;

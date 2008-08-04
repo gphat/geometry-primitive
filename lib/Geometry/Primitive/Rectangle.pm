@@ -33,15 +33,14 @@ sub get_points {
     push(@points, Geometry::Primitive::Point->new(
         x => $self->origin->x + $self->width, y => $self->origin->y + $self->height
     ));
-
     return \@points
 }
 
-sub grow {
+sub scale {
     my ($self, $amount) = @_;
 
-    $self->width($self->width + $amount);
-    $self->height($self->height + $amount);
+    $self->width($self->width * $amount);
+    $self->height($self->height * $amount);
 }
 
 sub point_end {
