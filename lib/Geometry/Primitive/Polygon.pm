@@ -37,27 +37,6 @@ sub area {
     return abs($area / 2);
 }
 
-sub get_points_as_array {
-    my ($self) = @_;
-
-    my @points;
-    foreach my $p (@{ $self->points }) {
-        push(@points, [ $p->x, $p->y ]);
-    }
-
-    return \@points;
-}
-
-sub scale {
-    my ($self, $amount) = @_;
-
-    foreach my $p (@{ $self->points }) {
-        $p->x($p->x * $amount);
-        $p->y($p->y * $amount);
-    }
-
-}
-
 sub point_end {
     my ($self) = @_;
 
@@ -68,6 +47,16 @@ sub point_start {
     my ($self) = @_;
 
     return $self->get_point(0);
+}
+
+sub scale {
+    my ($self, $amount) = @_;
+
+    foreach my $p (@{ $self->points }) {
+        $p->x($p->x * $amount);
+        $p->y($p->y * $amount);
+    }
+
 }
 
 __PACKAGE__->meta->make_immutable;

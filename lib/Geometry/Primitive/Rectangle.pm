@@ -100,10 +100,6 @@ Returns the area of this rectangle.
 
 Get the points that make up this Rectangle.
 
-=item I<grow ($amount)>
-
-Increase the hieght and width of this rectangle by the amount specified.
-
 =item I<point_end>
 
 Get the end point.  Returns the origin. Provided for Shape role.
@@ -111,6 +107,10 @@ Get the end point.  Returns the origin. Provided for Shape role.
 =item I<point_start>
 
 Get the start point.  Returns the origin.  Provided for Shape role.
+
+=item I<scale ($amount)>
+
+Scales the hieght and width of this rectangle by the amount specified.
 
 =item I<width>
 

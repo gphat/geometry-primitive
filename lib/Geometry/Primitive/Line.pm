@@ -174,6 +174,10 @@ Get the end point.  Provided for Shape role.
 
 Get the start point.  Provided for Shape role.
 
+=item I<scale>
+
+Does nothing at the moment.
+
 =item I<slope>
 
 Get the slope of the line.
