@@ -21,6 +21,18 @@ sub degrees_to_radians {
     return $degs * (PI / 180);
 }
 
+sub max {
+    my ($self, $a, $b);
+
+    $a > $b ? $a : $b;
+}
+
+sub min {
+    my ($self, $a, $b);
+
+    $a < $b ? $a : $b;
+}
+
 sub radians_to_degrees {
     my ($self, $rads) = @_;
 
@@ -62,6 +74,14 @@ The value of pi.
 =item I<degrees_to_radians>
 
 Convert degrees to radians
+
+=item I<max ($a, $b)>
+
+Returns the larger of the two supplied values.
+
+=item I<min ($a, $b)>
+
+Returns the smaller of the two supplied values.
 
 =item I<radians_to_degrees>
 

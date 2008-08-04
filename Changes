@@ -5,6 +5,7 @@ Revision history for Geometry-Primitive
   - Fix line slope calculation
   - Line: add is_perpendicular and is_parallel
   - Arc: don't check angles in get_point_at_angle, allow for negative arcs
+  - Util: Add max and min
 
 0.06
   - Shape: removed get_points in favor of point_start/point_end
