@@ -38,9 +38,9 @@ over 10 years ago.  C'est la vie.
 
 =item L<Arc|Geometry::Primitive::Arc>
 
-=item L<Arc|Geometry::Primitive::Bezier>
+=item L<Bezier|Geometry::Primitive::Bezier>
 
-=item L<Arc|Geometry::Primitive::Circle>
+=item L<Circle|Geometry::Primitive::Circle>
 
 =item L<Line|Geometry::Primitive::Line>
 
