@@ -1,7 +1,7 @@
 package Geometry::Primitive;
 use Moose;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 our $AUTHORITY = 'cpan:GPHAT';
 
 1;
@@ -38,9 +38,13 @@ over 10 years ago.  C'est la vie.
 
 =item L<Arc|Geometry::Primitive::Arc>
 
-=item L<Point|Geometry::Primitive::Point>
+=item L<Arc|Geometry::Primitive::Bezier>
+
+=item L<Arc|Geometry::Primitive::Circle>
 
 =item L<Line|Geometry::Primitive::Line>
+
+=item L<Point|Geometry::Primitive::Point>
 
 =item L<Polygon|Geometry::Primitive::Polygon>
 

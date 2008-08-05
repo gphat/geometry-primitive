@@ -20,9 +20,8 @@ lib/Geometry/Primitive/Point.pm
 lib/Geometry/Primitive/Polygon.pm
 lib/Geometry/Primitive/Rectangle.pm
 lib/Geometry/Primitive/Shape.pm
-lib/Geometry/Primitive/Util.pm
 Makefile.PL
-MANIFEST
+MANIFEST			This list of files
 META.yml
 README
 t/00-load.t
@@ -32,6 +31,5 @@ t/001-line.t
 t/001-polygon.t
 t/002-circle.t
 t/002-rectangle.pm
-t/010-util.t
 t/pod-coverage.t
 t/pod.t
