@@ -2,6 +2,7 @@ Revision history for Geometry-Primitive
 
 0.08
   - Add Bézier curve
+  - POD fix (thanks Brian Cassidy)
 
 0.07
   - Add scale method to Shape role and implementations
