@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.09
+  - Convenience coercions for Point from ArrayRef
+
 0.08
   - Add Bézier curve
   - POD fix (thanks Brian Cassidy)

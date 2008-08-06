@@ -1,6 +1,8 @@
 package Geometry::Primitive::Point;
 use Moose;
 
+use Moose::Util::TypeConstraints;
+
 extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Equal MooseX::Clone);
@@ -9,6 +11,10 @@ use overload ('""' => 'to_string');
 
 has 'x' => ( is => 'rw', isa => 'Num' );
 has 'y' => ( is => 'rw', isa => 'Num' );
+
+coerce 'Geometry::Primitive::Point'
+    => from 'ArrayRef'
+        => via { Geometry::Primitive::Point->new(x => $_->[0], y => $_->[1]) };
 
 sub equal_to {
     my ($self, $other) = @_;

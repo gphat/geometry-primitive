@@ -1,4 +1,4 @@
-use Test::More tests => 5;
+use Test::More tests => 6;
 
 BEGIN {
     use_ok('Geometry::Primitive::Point');
@@ -14,11 +14,11 @@ my $c2 = Geometry::Primitive::Point->new(x => 7, y => 6);
 my $bezier = Geometry::Primitive::Bezier->new(
     start => $point1,
     end => $point2,
-    control1 => $c1,
+    control1 => [5, 5],
     control2 => $c2
 );
 isa_ok($bezier, 'Geometry::Primitive::Bezier');
 
 ok($bezier->point_start->equal_to($point1), 'point_start');
 ok($bezier->point_end->equal_to($point2), 'point_end');
-
+ok($bezier->control1->equal_to($c1), 'coerced control point');

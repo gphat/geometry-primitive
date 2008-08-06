@@ -7,25 +7,31 @@ with qw(Geometry::Primitive::Shape MooseX::Clone);
 
 use overload ('""' => 'to_string');
 
+use Geometry::Primitive::Point;
+
 has 'control1' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point',
-    required => 1
+    required => 1,
+    coerce => 1
 );
 has 'control2' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point',
-    required => 1
+    required => 1,
+    coerce => 1
 );
 has 'end' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point',
-    required => 1
+    required => 1,
+    coerce => 1
 );
 has 'start' => (
     is => 'rw',
     isa => 'Geometry::Primitive::Point',
-    required => 1
+    required => 1,
+    coerce => 1
 );
 
 sub scale {

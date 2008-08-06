@@ -7,9 +7,13 @@ extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone);
 
+use Geometry::Primitive::Point;
+
 has 'angle_start' => ( is => 'rw', isa => 'Num', required => 1 );
 has 'angle_end' => ( is => 'rw', isa => 'Num', required => 1 );
-has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
+has 'origin' => (
+    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+);
 has 'radius' => ( is => 'rw', isa => 'Num', required => 1 );
 
 __PACKAGE__->meta->make_immutable;

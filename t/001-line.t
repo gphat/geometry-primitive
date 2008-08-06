@@ -1,4 +1,4 @@
-use Test::More tests => 14;
+use Test::More tests => 16;
 
 BEGIN {
     use_ok('Geometry::Primitive::Point');
@@ -43,4 +43,8 @@ my $line2 = Geometry::Primitive::Line->new(
     end => Geometry::Primitive::Point->new( x => 1, y => 1 ),
 );
 ok($line1->is_perpendicular($line2), 'perpendicular');
+
+my $cline = Geometry::Primitive::Line->new(start => [0, 0], end => [5, 5]);
+cmp_ok($cline->start->x, '==', 0, 'point coercion');
+ok($cline->slope, 'coerced line');
 

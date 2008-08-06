@@ -10,7 +10,9 @@ extends 'Geometry::Primitive';
 with qw(Geometry::Primitive::Shape MooseX::Clone);
 
 has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
-has 'origin' => ( is => 'rw', isa => 'Geometry::Primitive::Point' );
+has 'origin' => (
+    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+);
 has 'width' => ( is => 'rw', isa => 'Num', required => 1 );
 
 sub area {
