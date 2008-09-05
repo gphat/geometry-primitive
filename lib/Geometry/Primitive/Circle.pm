@@ -1,14 +1,16 @@
 package Geometry::Primitive::Circle;
 use Moose;
-
 use MooseX::AttributeHelpers;
+use MooseX::Storage;
 
-use Math::Trig;
+use Math::Trig ':pi';
 
 extends 'Geometry::Primitive::Arc';
 
+with Storage(format => 'JSON', io => 'File');
+
 has '+angle_start' => ( default => sub { 0 } );
-has '+angle_end' => ( default => sub { 360 } );
+has '+angle_end' => ( default => sub { pi2 } );
 
 sub area {
     my ($self) = @_;
@@ -74,6 +76,16 @@ Creates a new Geometry::Primitive::Arc
 =head2 Instance Methods
 
 =over 4
+
+=item I<angle_end>
+
+Set/Get the end angle for this circle.  Defaults to pi * 2 (or it wouldn't be
+a circle).
+
+=item I<angle_start>
+
+Set/Get the start andle for this circle.  Defaults to 0 (or it wouldn't be a 
+circle)
 
 =item I<area>
 

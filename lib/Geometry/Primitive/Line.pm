@@ -1,9 +1,11 @@
 package Geometry::Primitive::Line;
 use Moose;
+use MooseX::Storage;
 
 extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone);
+with Storage(format => 'JSON', io => 'File');
 
 use overload ('""' => 'to_string');
 

@@ -1,13 +1,14 @@
 package Geometry::Primitive::Rectangle;
 use Moose;
-
 use MooseX::AttributeHelpers;
+use MooseX::Storage;
 
 use Geometry::Primitive::Point;
 
 extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone);
+with Storage(format => 'JSON', io => 'File');
 
 has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
 has 'origin' => (
@@ -101,6 +102,10 @@ Returns the area of this rectangle.
 =item I<get_points>
 
 Get the points that make up this Rectangle.
+
+=item I<origin>
+
+Set/Get the origin of this rectangle.
 
 =item I<point_end>
 

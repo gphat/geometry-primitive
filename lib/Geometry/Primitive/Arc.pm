@@ -1,11 +1,12 @@
 package Geometry::Primitive::Arc;
 use Moose;
-
 use MooseX::AttributeHelpers;
+use MooseX::Storage;
 
 extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone);
+with Storage(format => 'JSON', io => 'File');
 
 use Geometry::Primitive::Point;
 
@@ -25,6 +26,7 @@ __PACKAGE__->meta->make_immutable;
 #     return (($self->radius**2 * ($self->angle_end - $self->angle_start)) / 2
 #     );
 # }
+
 sub get_point_at_angle {
     my ($self, $angle) = @_;
 
@@ -32,12 +34,6 @@ sub get_point_at_angle {
         x => $self->origin->x + ($self->radius * cos($angle)),
         y => $self->origin->y + ($self->radius * sin($angle))
     );
-}
-
-sub scale {
-    my ($self, $amount) = @_;
-
-    $self->radius($self->radius * $amount);
 }
 
 sub length {
@@ -56,6 +52,12 @@ sub point_start {
     my ($self) = @_;
 
     return $self->get_point_at_angle($self->angle_start);
+}
+
+sub scale {
+    my ($self, $amount) = @_;
+
+    $self->radius($self->radius * $amount);
 }
 
 no Moose;
@@ -105,18 +107,18 @@ The starting angle for this arc in radians.
 
 The ending angle for this arc in radians.
 
-=item I<length>
-
-Returns the length of this arc.
-
 =item I<get_point_at_angle>
 
 Given angle in radians returns the point at that angle on this arc.  Returns
 undef if the angle falls outside this arc's range.
 
-=item I<scale ($amount)>
+=item I<length>
 
-Increases the radius by multiplying it by the supplied amount.
+Returns the length of this arc.
+
+=item I<origin>
+
+Set/Get the origin of this arc.
 
 =item I<point_end>
 
@@ -129,6 +131,11 @@ Get the start point.  Provided for Shape role.
 =item I<radius>
 
 Returns the radius of the arc.
+
+=item I<scale ($amount)>
+
+Increases the radius by multiplying it by the supplied amount.
+
 
 =back
 

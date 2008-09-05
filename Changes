@@ -1,5 +1,10 @@
 Revision history for Geometry-Primitive
 
+0.10
+  - POD updates (thanks CPAN testers!)
+  - Circle: set defaults in radians, not degrees
+  - Add MooseX::Storage for serialization
+
 0.09
   - Convenience coercions for Point from ArrayRef
 

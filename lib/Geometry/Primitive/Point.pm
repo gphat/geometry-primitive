@@ -1,11 +1,12 @@
 package Geometry::Primitive::Point;
 use Moose;
-
 use Moose::Util::TypeConstraints;
+use MooseX::Storage;
 
 extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Equal MooseX::Clone);
+with Storage(format => 'JSON', io => 'File');
 
 use overload ('""' => 'to_string');
 

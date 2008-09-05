@@ -1,11 +1,12 @@
 package Geometry::Primitive::Polygon;
 use Moose;
-
 use MooseX::AttributeHelpers;
+use MooseX::Storage;
 
 extends 'Geometry::Primitive';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone);
+with Storage(format => 'JSON', io => 'File');
 
 has 'points' => (
     metaclass => 'Collection::Array',
@@ -128,6 +129,10 @@ Get the end point.  Provided for Shape role.
 =item I<point_start>
 
 Get the start point.  Provided for Shape role.
+
+=item I<points>
+
+Set/Get the arrayref of points that make up this Polygon.
 
 =item I<scale ($amount)>
 
