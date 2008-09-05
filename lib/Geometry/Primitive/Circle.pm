@@ -46,7 +46,7 @@ __END__
 
 =head1 NAME
 
-Geometry::Primitive::Circle
+Geometry::Primitive::Circle - A Circle
 
 =head1 DESCRIPTION
 

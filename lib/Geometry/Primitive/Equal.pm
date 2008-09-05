@@ -13,7 +13,7 @@ no Moose;
 __END__
 =head1 NAME
 
-Geometry::Primitive::Equal
+Geometry::Primitive::Equal - Equality Role
 
 =head1 DESCRIPTION
 

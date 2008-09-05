@@ -67,7 +67,7 @@ __END__
 
 =head1 NAME
 
-Geometry::Primitive::Arc
+Geometry::Primitive::Arc - Portion of the circumference of a Circle
 
 =head1 DESCRIPTION
 

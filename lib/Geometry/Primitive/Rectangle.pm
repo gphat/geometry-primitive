@@ -63,7 +63,7 @@ __END__
 
 =head1 NAME
 
-Geometry::Primitive::Rectangle
+Geometry::Primitive::Rectangle - 4 sided polygon
 
 =head1 DESCRIPTION
 

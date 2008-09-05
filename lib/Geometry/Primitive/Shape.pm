@@ -10,7 +10,7 @@ no Moose;
 __END__
 =head1 NAME
 
-Geometry::Primitive::Shape
+Geometry::Primitive::Shape - Shape Role
 
 =head1 DESCRIPTION
 

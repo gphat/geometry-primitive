@@ -69,7 +69,7 @@ __END__
 
 =head1 NAME
 
-Geometry::Primitive::Polygon
+Geometry::Primitive::Polygon - Closed shape with an arbitrary number of points.
 
 =head1 DESCRIPTION
 
@@ -80,7 +80,7 @@ series of points that represent a closed path.
 
   use Geometry::Primitive::Polygon;
 
-  my $poly = Geometry::Primitive::Polygon->new();
+  my $poly = Geometry::Primitive::Polygon->new;
   $poly->add_point($point1);
   $poly->add_point($point2);
   $poly->add_point($point3);

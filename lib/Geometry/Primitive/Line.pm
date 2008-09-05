@@ -117,7 +117,7 @@ __END__
 
 =head1 NAME
 
-Geometry::Primitive::Line
+Geometry::Primitive::Line - A Line
 
 =head1 DESCRIPTION
 

@@ -36,7 +36,7 @@ no Moose;
 
 =head1 NAME
 
-Geometry::Primitive::Point
+Geometry::Primitive::Point - An XY coordinate
 
 =head1 DESCRIPTION
 

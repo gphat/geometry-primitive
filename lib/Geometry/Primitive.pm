@@ -14,7 +14,8 @@ Geometry::Primitive - Primitive Geometry Entities
 
 Geometry::Primitive is a device and library agnostic system for representing
 geometric entities such as points, lines and shapes.  It provides simple
-objects and many convenience methods you would expect from a geometry library.
+objects and many convenience methods you would expect from a simple geometry
+library.
 
     use Geometry::Primitive::Point;
 
@@ -23,12 +24,9 @@ objects and many convenience methods you would expect from a geometry library.
 
 =head1 DISCLAIMER
 
-This module is not complete.  The functionality that exists was created to
-satisfy the needs of some other modules.  I B<welcome> additional features!
-
 I'm not a math guy. I hate math. I will likely learn a lot in the process
 of making this library. If you are a math person you will probably look at
-this and find many things missing or wrong. Patches are encouraged. I will
+this and find many things missing or wrong. Patches are B<encouraged>. I will
 likely find that I've done something completely wrong having taken geometry
 over 10 years ago.  C'est la vie.
 
@@ -51,6 +49,13 @@ over 10 years ago.  C'est la vie.
 =item L<Rectangle|Geometry::Primitive::Rectangle>
 
 =back
+
+=head1 SERIALIZATON
+
+All of the entities in this library support serialization via
+L<MooseX::Storage>.  This is primarily to support serialization in consumers
+of this library, but may be useful for other purposes.  All classes are set
+to JSON format and File IO.
 
 =head1 AUTHOR
 
