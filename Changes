@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.11
+  - Stop depending on Moose coverage
+
 0.10
   - POD updates (thanks CPAN testers!)
   - Circle: set defaults in radians, not degrees

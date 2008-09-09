@@ -6,8 +6,6 @@ author   'Cory Watson <gphat@cpan.org>';
 
 build_requires 'Test::More';
 
-test_requires 'Pod::Coverage::Moose';
-
 requires 'Check::ISA' => '0.04';
 requires 'Math::Complex' => '1.54';
 requires 'Moose' => '0.57';
