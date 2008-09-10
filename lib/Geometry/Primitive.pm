@@ -1,7 +1,7 @@
 package Geometry::Primitive;
 use Moose;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 our $AUTHORITY = 'cpan:GPHAT';
 
 1;

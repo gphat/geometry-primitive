@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.12
+  - Remove .DS_Store from MANIFEST
+
 0.11
   - Stop depending on Moose coverage
 
