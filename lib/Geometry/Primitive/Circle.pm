@@ -37,10 +37,7 @@ sub diameter {
 sub point_end {
     my ($self) = @_;
 
-    return Geometry::Primitive::Point->new(
-        x => $self->origin->x,
-        y => $self->origin->y - ($self->radius / 2)
-    );
+    return $self->point_start;
 }
 
 sub point_start {
@@ -119,6 +116,16 @@ Returns a new circle whose radius is $amount times bigger than this one.
 =item I<origin>
 
 Set/Get the origin of this circle.
+
+=item I<point_end>
+
+Set/Get the "end" point of this cicle.  Calls C<point_start>.
+
+
+=item I<point_start>
+
+Set/Get the "start" point of this cicle.  Returns the point at the circle's
+origin X coordinate and the origin Y coordinate + radius / 2.
 
 =item I<radius>
 

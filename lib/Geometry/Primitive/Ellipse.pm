@@ -24,10 +24,7 @@ sub area {
 sub point_end {
     my ($self) = @_;
 
-    return Geometry::Primitive::Point->new(
-        x => $self->origin->x,
-        y => $self->origin->y - ($self->height / 2)
-    );
+    return $self->point_start;
 }
 
 sub point_start {
@@ -100,6 +97,15 @@ Set/Get the height of this ellipse.
 =item I<origin>
 
 Set/Get the origin of this ellipse.
+
+=item I<point_end>
+
+Gets the "end" point for this Ellipse.  Same as C<point_start>.
+
+=item I<point_start>
+
+Get the point that "starts" this Ellipse.  Returns the a point where the X
+coordinate is the Ellipse origin X and the origin Y + height / 2.
 
 =item I<scale ($amount)>
 
