@@ -8,6 +8,7 @@ extends 'Geometry::Primitive';
 with qw(Geometry::Primitive::Shape MooseX::Clone);
 with Storage(format => 'JSON', io => 'File');
 
+use Geometry::Primitive::Point;
 use Math::Trig ':pi';
 
 has 'origin' => (
