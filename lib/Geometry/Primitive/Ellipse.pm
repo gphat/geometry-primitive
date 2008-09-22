@@ -5,6 +5,9 @@ use MooseX::Storage;
 
 use Math::Trig ':pi';
 
+extends 'Geometry::Primitive';
+
+with qw(Geometry::Primitive::Shape MooseX::Clone);
 with Storage(format => 'JSON', io => 'File');
 
 has 'height' => ( is => 'rw', isa => 'Num', default => sub { 0 });
@@ -17,6 +20,24 @@ sub area {
     my ($self) = @_;
     return (pi * $self->width * $self->height) / 4;
 };
+
+sub point_end {
+    my ($self) = @_;
+
+    return Geometry::Primitive::Point->new(
+        x => $self->origin->x,
+        y => $self->origin->y - ($self->height / 2)
+    );
+}
+
+sub point_start {
+    my ($self) = @_;
+
+    return Geometry::Primitive::Point->new(
+        x => $self->origin->x,
+        y => $self->origin->y - ($self->height / 2)
+    );
+}
 
 sub scale {
     my ($self, $amount) = @_;

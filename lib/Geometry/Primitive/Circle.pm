@@ -3,9 +3,12 @@ use Moose;
 use MooseX::AttributeHelpers;
 use MooseX::Storage;
 
-use Math::Trig ':pi';
+extends 'Geometry::Primitive';
 
+with qw(Geometry::Primitive::Shape MooseX::Clone);
 with Storage(format => 'JSON', io => 'File');
+
+use Math::Trig ':pi';
 
 has 'origin' => (
     is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
@@ -29,6 +32,24 @@ sub diameter {
     my ($self) = @_;
 
     return $self->radius * 2;
+}
+
+sub point_end {
+    my ($self) = @_;
+
+    return Geometry::Primitive::Point->new(
+        x => $self->origin->x,
+        y => $self->origin->y - ($self->radius / 2)
+    );
+}
+
+sub point_start {
+    my ($self) = @_;
+
+    return Geometry::Primitive::Point->new(
+        x => $self->origin->x,
+        y => $self->origin->y - ($self->radius / 2)
+    );
 }
 
 sub scale {
