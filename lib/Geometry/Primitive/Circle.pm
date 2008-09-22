@@ -5,12 +5,14 @@ use MooseX::Storage;
 
 use Math::Trig ':pi';
 
-extends 'Geometry::Primitive::Arc';
-
 with Storage(format => 'JSON', io => 'File');
 
-has '+angle_start' => ( default => sub { 0 } );
-has '+angle_end' => ( default => sub { pi2 } );
+has 'origin' => (
+    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+);
+has 'radius' => (
+    is => 'rw', isa => 'Num', default => 0
+);
 
 sub area {
     my ($self) = @_;
@@ -29,13 +31,13 @@ sub diameter {
     return $self->radius * 2;
 }
 
-override('scale', sub {
+sub scale {
     my ($self, $amount) = @_;
 
     return Geometry::Primitive::Circle->new(
         radius => $self->radius * $amount
     );
-});
+}
 
 __PACKAGE__->meta->make_immutable;
 
@@ -50,7 +52,7 @@ Geometry::Primitive::Circle - A Circle
 
 =head1 DESCRIPTION
 
-Geometry::Primitive::Circle represents a closed arc
+Geometry::Primitive::Circle represents an ellipse with equal width and height.
 
 =head1 SYNOPSIS
 
@@ -69,23 +71,13 @@ Geometry::Primitive::Circle represents a closed arc
 
 =item I<new>
 
-Creates a new Geometry::Primitive::Arc
+Creates a new Geometry::Primitive::Circle
 
 =back
 
 =head2 Instance Methods
 
 =over 4
-
-=item I<angle_end>
-
-Set/Get the end angle for this circle.  Defaults to pi * 2 (or it wouldn't be
-a circle).
-
-=item I<angle_start>
-
-Set/Get the start andle for this circle.  Defaults to 0 (or it wouldn't be a 
-circle)
 
 =item I<area>
 

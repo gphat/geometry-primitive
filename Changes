@@ -1,6 +1,9 @@
 Revision history for Geometry-Primitive
 
 0.12
+  - Add Ellipse
+  - Circle is no longer a child of Arc
+  - Fix some POD
   - Remove .DS_Store from MANIFEST
 
 0.11
