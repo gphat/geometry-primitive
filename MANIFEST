@@ -14,6 +14,7 @@ lib/Geometry/Primitive.pm
 lib/Geometry/Primitive/Arc.pm
 lib/Geometry/Primitive/Bezier.pm
 lib/Geometry/Primitive/Circle.pm
+lib/Geometry/Primitive/Ellipse.pm
 lib/Geometry/Primitive/Equal.pm
 lib/Geometry/Primitive/Line.pm
 lib/Geometry/Primitive/Point.pm
@@ -27,6 +28,7 @@ README
 t/00-load.t
 t/000-point.t
 t/001-arc.t
+t/001-ellipse.t
 t/001-line.t
 t/001-polygon.t
 t/002-bezier.t

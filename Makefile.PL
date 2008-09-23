@@ -13,7 +13,5 @@ requires 'MooseX::AttributeHelpers' => '0.13';
 requires 'MooseX::Clone' => '0.03';
 requires 'MooseX::Storage' => '0.14';
 
-auto_install;
-
 WriteAll;
 
