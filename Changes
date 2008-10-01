@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.13
+  - Move pod tests to t/author
+
 0.12
   - Add Ellipse
   - Circle is no longer a child of Arc
