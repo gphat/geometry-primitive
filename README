@@ -1,16 +1,14 @@
-Geometry-Primitive
+Geometry::Primitive - Primitive Geometry Entities
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+Geometry::Primitive is a device and library agnostic system for representing
+geometric entities such as points, lines and shapes.  It provides simple
+objects and many convenience methods you would expect from a simple geometry
+library.
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+    use Geometry::Primitive::Point;
 
+    my $foo = Geometry::Primitive::Point->new(x => 1, y => 3);
+    ...
 
 INSTALLATION
 
