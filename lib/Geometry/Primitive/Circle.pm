@@ -84,67 +84,48 @@ Geometry::Primitive::Circle represents an ellipse with equal width and height.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Circle
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<area>
+=head2 area
 
 Returns the area of this circle.
 
-=item I<circumference>
+=head2 circumference
 
 Returns the circumference of this circle.
 
-=item I<diameter>
+=head2 diameter
 
 Returns the diameter of this circle
 
-=item I<scale ($amount)>
+=head2 scale ($amount)
 
 Returns a new circle whose radius is $amount times bigger than this one.
 
-=item I<origin>
+=head2 origin
 
 Set/Get the origin of this circle.
 
-=item I<point_end>
+=head2 point_end
 
 Set/Get the "end" point of this cicle.  Calls C<point_start>.
 
-
-=item I<point_start>
+=head2 point_start
 
 Set/Get the "start" point of this cicle.  Returns the point at the circle's
 origin X coordinate and the origin Y coordinate + radius / 2.
 
-=item I<radius>
+=head2 radius
 
 Set/Get the radius of this circle.
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

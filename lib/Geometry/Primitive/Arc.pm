@@ -85,71 +85,52 @@ Geometry::Primitive::Arc represents a closed segment of a curve.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Arc
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<angle_start>
+=head2 angle_start
 
 The starting angle for this arc in radians.
 
-=item I<angle_end>
+=head2 angle_end
 
 The ending angle for this arc in radians.
 
-=item I<get_point_at_angle>
+=head2 get_point_at_angle
 
 Given angle in radians returns the point at that angle on this arc.  Returns
 undef if the angle falls outside this arc's range.
 
-=item I<length>
+=head2 length
 
 Returns the length of this arc.
 
-=item I<origin>
+=head2 origin
 
 Set/Get the origin of this arc.
 
-=item I<point_end>
+=head2 point_end
 
 Get the end point.  Provided for Shape role.
 
-=item I<point_start>
+=head2 point_start
 
 Get the start point.  Provided for Shape role.
 
-=item I<radius>
+=head2 radius
 
 Returns the radius of the arc.
 
-=item I<scale ($amount)>
+=head2 scale ($amount)
 
 Increases the radius by multiplying it by the supplied amount.
-
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

@@ -81,63 +81,45 @@ height.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Rectangle
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<area>
+=head2 area
 
 Returns the area of this rectangle.
 
-=item I<get_points>
+=head2 get_points
 
 Get the points that make up this Rectangle.
 
-=item I<origin>
+=head2 origin
 
 Set/Get the origin of this rectangle.
 
-=item I<point_end>
+=head2 point_end
 
 Get the end point.  Returns the origin. Provided for Shape role.
 
-=item I<point_start>
+=head2 point_start
 
 Get the start point.  Returns the origin.  Provided for Shape role.
 
-=item I<scale ($amount)>
+=head2 scale ($amount)
 
 Scales the hieght and width of this rectangle by the amount specified.
 
-=item I<width>
+=head2 width
 
 Add a point to this Rectangle.
 
-=item I<height>
-
-=back
+=head2 height
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

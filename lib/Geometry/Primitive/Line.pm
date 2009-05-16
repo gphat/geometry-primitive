@@ -133,86 +133,68 @@ Geometry::Primitive::Line represents a straight curve defined by two points.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Line
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<contains_point>
+=head2 contains_point
 
 Returns true if the supplied point is 'on' the line.  Accepts either a point
 object or an x y pair.
 
-=item I<end>
+=head2 end
 
 Set/Get the end point of the line.
 
-=item I<grow>
+=head2 grow
 
-Does nothing, as I'm not show how.  Patches or hints welcome.
+Does nothing, as I'm not sure how.  Patches or hints welcome.
 
-=item I<is_parallel ($other_line)>
+=head2 is_parallel ($other_line)>
 
 Returns true if the supplied line is parallel to this one.
 
-=item I<is_perpendicular ($other_line)>
+=head2 is_perpendicular ($other_line)
 
 Returns true if the supplied line is perpendicular to this one.
 
-=item I<length>
+=head2 length
 
 Get the length of the line.
 
-=item I<point_end>
+=head2 point_end
 
 Get the end point.  Provided for Shape role.
 
-=item I<point_start>
+=head2 point_start
 
 Get the start point.  Provided for Shape role.
 
-=item I<scale>
+=head2 scale
 
 Does nothing at the moment.
 
-=item I<slope>
+=head2 slope
 
 Get the slope of the line.
 
-=item I<start>
+=head2 start
 
 Set/Get the start point of the line.
 
-=item I<to_string>
+=head2 to_string
 
 Guess!
 
-=item I<y_intercept>
+=head2 y_intercept
 
 Returns the Y intercept of this line.
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

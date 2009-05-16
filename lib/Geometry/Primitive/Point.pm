@@ -50,49 +50,31 @@ Geometry::Primitive::Point represents a location in two dimensional space.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Point.
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<equal_to>
+=head2 equal_to
 
 Compares this point to another.
 
-=item I<to_string>
+=head2 to_string
 
 Return this point as a string $x,$y
 
-=item I<x>
+=head2 x
 
 Set/Get the X value.
 
-=item I<y>
+=head2 y
 
 Set/Get the Y value.
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

@@ -72,62 +72,44 @@ Geometry::Primitive::Ellipse represents an elliptical conic section.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Ellipse
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<area>
+=head2 area
 
 Returns the area of this ellipse.
 
-=item I<height>
+=head2 height
 
 Set/Get the height of this ellipse.
 
-=item I<origin>
+=head2 origin
 
 Set/Get the origin of this ellipse.
 
-=item I<point_end>
+=head2 point_end
 
 Gets the "end" point for this Ellipse.  Same as C<point_start>.
 
-=item I<point_start>
+=head2 point_start
 
 Get the point that "starts" this Ellipse.  Returns the a point where the X
 coordinate is the Ellipse origin X and the origin Y + height / 2.
 
-=item I<scale ($amount)>
+=head2 scale ($amount)
 
 Returns a new ellipse whose radius is $amount times bigger than this one.
 
-=item I<width>
+=head2 width
 
 Set/Get the width of this ellipse.
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

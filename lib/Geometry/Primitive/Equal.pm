@@ -31,29 +31,19 @@ Geometry::Primitive::Equal is a Moose role for equality.
 
 =head1 METHODS
 
-=over 4
-
-=item I<equal_to>
+=head2 equal_to
 
 Implement this.
 
-=item I<not_equal_to>
+=head2 not_equal_to
 
-Provided you implement I<equal_to>, this will be implemented for you!
-
-=back
+Provided you implement C<equal_to>, this will be implemented for you!
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

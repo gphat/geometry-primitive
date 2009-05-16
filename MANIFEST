@@ -32,5 +32,5 @@ t/002-bezier.t
 t/002-circle.t
 t/002-rectangle.pm
 t/010-serialize.t
-t/pod-coverage.t
-t/pod.t
+t/author/pod-coverage.t
+t/author/pod.t

@@ -88,69 +88,51 @@ series of points that represent a closed path.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Polygon
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<area>
+=head2 area
 
 Area of this polygon.  Assumes it is non-self-intersecting.
 
-=item I<add_point>
+=head2 add_point
 
 Add a point to this polygon.
 
-=item I<clear_points>
+=head2 clear_points
 
 Clears all points from this polygon.
 
-=item I<point_count>
+=head2 point_count
 
 Returns the number of points that bound this polygon.
 
-=item I<get_point>
+=head2 get_point
 
 Returns the point at the specified offset.
 
-=item I<point_end>
+=head2 point_end
 
 Get the end point.  Provided for Shape role.
 
-=item I<point_start>
+=head2 point_start
 
 Get the start point.  Provided for Shape role.
 
-=item I<points>
+=head2 points
 
 Set/Get the arrayref of points that make up this Polygon.
 
-=item I<scale ($amount)>
+=head2 scale ($amount)
 
 Scale this this polygon by the supplied amount.
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

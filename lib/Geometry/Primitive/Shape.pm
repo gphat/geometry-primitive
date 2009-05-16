@@ -24,36 +24,24 @@ Geometry::Primitive::Shape is a geometric shape.
 
 =head1 METHODS
 
-=over 4
-
-=item I<grow>
+=head2 grow
 
 Increase the size of this shape by the amount specified.  Consult the shape
 implementation's documentation for this works.
 
-=item I<point_end>
+=head2 point_end
 
 The end point of this shape.
 
-=item I<point_start>
+=head2 point_start
 
 The starting point of this shape.
-
-
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.

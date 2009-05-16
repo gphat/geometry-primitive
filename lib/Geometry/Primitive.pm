@@ -1,7 +1,7 @@
 package Geometry::Primitive;
 use Moose;
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 our $AUTHORITY = 'cpan:GPHAT';
 
 1;
@@ -40,6 +40,8 @@ over 10 years ago.  C'est la vie.
 
 =item L<Circle|Geometry::Primitive::Circle>
 
+=item L<Ellipse|Geometry::Primitive::Ellipse>
+
 =item L<Line|Geometry::Primitive::Line>
 
 =item L<Point|Geometry::Primitive::Point>
@@ -61,8 +63,6 @@ to JSON format and File IO.
 
 Cory Watson, C<< <gphat@cpan.org> >>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 ACKNOWLEDGEMENTS
 
 Many of the ideas here come from my experience using the Cairo library.
@@ -74,10 +74,6 @@ the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geometry-P
 automatically be notified of progress on your bug as I make changes.
 
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -96,70 +96,52 @@ Geometry::Primitive::Bezier represents a cubic Bézier curve.
 
 =head1 METHODS
 
-=head2 Constructor
-
-=over 4
-
-=item I<new>
+=head2 new
 
 Creates a new Geometry::Primitive::Bezier
 
-=back
-
-=head2 Instance Methods
-
-=over 4
-
-=item I<control1>
+=head2 control1
 
 Set/Get the first control point of the curve.
 
-=item I<control2>
+=head2 control2
 
 Set/Get the second control point of the curve.
 
-=item I<end>
+=head2 end
 
 Set/Get the end point of the curve.
 
-=item I<grow>
+=head2 grow
 
 Does nothing, as I'm not sure how.  Patches or hints welcome.
 
-=item I<point_end>
+=head2 point_end
 
 Get the end point.  Provided for Shape role.
 
-=item I<point_start>
+=head2 point_start
 
 Get the start point.  Provided for Shape role.
 
-=item I<scale>
+=head2 scale
 
 Scales this curve by the amount provided.  Multiplies each coordinate by the
 amount.
 
-=item I<start>
+=head2 start
 
 Set/Get the start point of the line.
 
-=item I<to_string>
+=head2 to_string
 
 Guess!
-
-=back
 
 =head1 AUTHOR
 
 Cory Watson <gphat@cpan.org>
 
-Infinity Interactive, L<http://www.iinteractive.com>
-
 =head1 COPYRIGHT & LICENSE
-
-Copyright 2008 by Infinity Interactive, Inc.
-
-L<http://www.iinteractive.com>
 
 You can redistribute and/or modify this code under the same terms as Perl
 itself.
