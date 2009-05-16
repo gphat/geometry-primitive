@@ -7,11 +7,11 @@ author   'Cory Watson <gphat@cpan.org>';
 build_requires 'Test::More';
 
 requires 'Check::ISA' => '0.04';
-requires 'Math::Complex' => '1.54';
-requires 'Moose' => '0.57';
-requires 'MooseX::AttributeHelpers' => '0.13';
-requires 'MooseX::Clone' => '0.03';
-requires 'MooseX::Storage' => '0.14';
+requires 'Math::Complex' => '1.56';
+requires 'Moose' => '0.77';
+requires 'MooseX::AttributeHelpers' => '0.17';
+requires 'MooseX::Clone' => '0.04';
+requires 'MooseX::Storage' => '0.17';
 
 WriteAll;
 
