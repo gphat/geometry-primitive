@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.17
+  - Fix bug in POD
+
 0.16
   - Dep bumps
 

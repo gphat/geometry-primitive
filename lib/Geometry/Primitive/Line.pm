@@ -150,7 +150,7 @@ Set/Get the end point of the line.
 
 Does nothing, as I'm not sure how.  Patches or hints welcome.
 
-=head2 is_parallel ($other_line)>
+=head2 is_parallel ($other_line)
 
 Returns true if the supplied line is parallel to this one.
 
