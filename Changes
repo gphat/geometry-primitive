@@ -2,6 +2,7 @@ Revision history for Geometry-Primitive
 
 0.17
   - Fix bug in POD
+  - Fix Geometry::Primitive not being immutable
 
 0.16
   - Dep bumps
