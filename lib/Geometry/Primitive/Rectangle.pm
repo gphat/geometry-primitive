@@ -1,6 +1,5 @@
 package Geometry::Primitive::Rectangle;
 use Moose;
-use MooseX::AttributeHelpers;
 use MooseX::Storage;
 
 use Geometry::Primitive::Point;
@@ -10,11 +9,21 @@ extends 'Geometry::Primitive';
 with qw(Geometry::Primitive::Shape MooseX::Clone);
 with Storage(format => 'JSON', io => 'File');
 
-has 'height' => ( is => 'rw', isa => 'Num', required => 1 );
-has 'origin' => (
-    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+has 'height' => (
+    is => 'rw',
+    isa => 'Num',
+    required => 1
 );
-has 'width' => ( is => 'rw', isa => 'Num', required => 1 );
+has 'origin' => (
+    is => 'rw',
+    isa => 'Geometry::Primitive::Point',
+    coerce => 1
+);
+has 'width' => (
+    is => 'rw',
+    isa => 'Num',
+    required => 1
+);
 
 sub area {
     my ($self) = @_;
@@ -79,6 +88,20 @@ height.
   $poly->height(100);
   $poly->width(100);
 
+=head1 ATTRIBUTES
+
+=head2 height
+
+Set/Get the height of this Rectangle.
+
+=head2 origin
+
+Set/Get the origin of this rectangle.
+
+=head2 width
+
+Set/Get the width of this Rectangle.
+
 =head1 METHODS
 
 =head2 new
@@ -93,10 +116,6 @@ Returns the area of this rectangle.
 
 Get the points that make up this Rectangle.
 
-=head2 origin
-
-Set/Get the origin of this rectangle.
-
 =head2 point_end
 
 Get the end point.  Returns the origin. Provided for Shape role.
@@ -108,12 +127,6 @@ Get the start point.  Returns the origin.  Provided for Shape role.
 =head2 scale ($amount)
 
 Scales the hieght and width of this rectangle by the amount specified.
-
-=head2 width
-
-Add a point to this Rectangle.
-
-=head2 height
 
 =head1 AUTHOR
 

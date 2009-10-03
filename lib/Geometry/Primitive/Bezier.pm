@@ -94,11 +94,7 @@ Geometry::Primitive::Bezier represents a cubic Bézier curve.
       end => $point4
   );
 
-=head1 METHODS
-
-=head2 new
-
-Creates a new Geometry::Primitive::Bezier
+=head1 ATTRIBUTES
 
 =head2 control1
 
@@ -111,6 +107,16 @@ Set/Get the second control point of the curve.
 =head2 end
 
 Set/Get the end point of the curve.
+
+=head2 start
+
+Set/Get the start point of the line.
+
+=head1 METHODS
+
+=head2 new
+
+Creates a new Geometry::Primitive::Bezier
 
 =head2 grow
 
@@ -128,10 +134,6 @@ Get the start point.  Provided for Shape role.
 
 Scales this curve by the amount provided.  Multiplies each coordinate by the
 amount.
-
-=head2 start
-
-Set/Get the start point of the line.
 
 =head2 to_string
 

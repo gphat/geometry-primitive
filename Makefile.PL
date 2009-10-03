@@ -8,8 +8,7 @@ build_requires 'Test::More';
 
 requires 'Check::ISA' => '0.04';
 requires 'Math::Complex' => '1.56';
-requires 'Moose' => '0.79';
-requires 'MooseX::AttributeHelpers' => '0.17';
+requires 'Moose' => '0.92';
 requires 'MooseX::Clone' => '0.04';
 requires 'MooseX::Storage' => '0.17';
 

@@ -10,8 +10,14 @@ with Storage(format => 'JSON', io => 'File');
 
 use overload ('""' => 'to_string');
 
-has 'x' => ( is => 'rw', isa => 'Num' );
-has 'y' => ( is => 'rw', isa => 'Num' );
+has 'x' => (
+    is => 'rw',
+    isa => 'Num'
+);
+has 'y' => (
+    is => 'rw',
+    isa => 'Num'
+);
 
 coerce 'Geometry::Primitive::Point'
     => from 'ArrayRef'
@@ -48,6 +54,16 @@ Geometry::Primitive::Point represents a location in two dimensional space.
 
   my $point = Geometry::Primitive::Point->new({ x => 2, y => 0 });
 
+=head1 ATTRIBUTES
+
+=head2 x
+
+Set/Get the X value.
+
+=head2 y
+
+Set/Get the Y value.
+
 =head1 METHODS
 
 =head2 new
@@ -61,14 +77,6 @@ Compares this point to another.
 =head2 to_string
 
 Return this point as a string $x,$y
-
-=head2 x
-
-Set/Get the X value.
-
-=head2 y
-
-Set/Get the Y value.
 
 =head1 AUTHOR
 

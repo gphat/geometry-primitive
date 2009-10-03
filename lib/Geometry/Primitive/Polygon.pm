@@ -1,6 +1,5 @@
 package Geometry::Primitive::Polygon;
 use Moose;
-use MooseX::AttributeHelpers;
 use MooseX::Storage;
 
 extends 'Geometry::Primitive';
@@ -9,16 +8,15 @@ with qw(Geometry::Primitive::Shape MooseX::Clone);
 with Storage(format => 'JSON', io => 'File');
 
 has 'points' => (
-    metaclass => 'Collection::Array',
+    traits => [ qw(Array Clone) ],
     is => 'rw',
     isa => 'ArrayRef[Geometry::Primitive::Point]',
-    traits => [qw(Clone)],
     default => sub { [] },
     provides => {
-        'push' => 'add_point',
-        'clear' => 'clear_points',
-        'count' => 'point_count',
-        'get' => 'get_point'
+        add_point   => 'push',
+        clear_points=> 'clear',
+        count       => 'point_count',
+        get_point   => 'get'
     }
 );
 
@@ -86,6 +84,12 @@ series of points that represent a closed path.
   $poly->add_point($point3);
   # No need to close the path, it's handled automatically
 
+=head1 ATTRIBUTES
+
+=head2 points
+
+Set/Get the arrayref of points that make up this Polygon.
+
 =head1 METHODS
 
 =head2 new
@@ -119,10 +123,6 @@ Get the end point.  Provided for Shape role.
 =head2 point_start
 
 Get the start point.  Provided for Shape role.
-
-=head2 points
-
-Set/Get the arrayref of points that make up this Polygon.
 
 =head2 scale ($amount)
 

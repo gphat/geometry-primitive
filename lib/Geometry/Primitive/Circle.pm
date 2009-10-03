@@ -1,6 +1,5 @@
 package Geometry::Primitive::Circle;
 use Moose;
-use MooseX::AttributeHelpers;
 use MooseX::Storage;
 
 extends 'Geometry::Primitive';
@@ -12,10 +11,14 @@ use Geometry::Primitive::Point;
 use Math::Trig ':pi';
 
 has 'origin' => (
-    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+    is => 'rw',
+    isa => 'Geometry::Primitive::Point',
+    coerce => 1
 );
 has 'radius' => (
-    is => 'rw', isa => 'Num', default => 0
+    is => 'rw',
+    isa => 'Num',
+    default => 0
 );
 
 sub area {
@@ -82,6 +85,16 @@ Geometry::Primitive::Circle represents an ellipse with equal width and height.
   );
   print $circle->diameter;
 
+=head1 ATTRIBUTES
+
+=head2 origin
+
+Set/Get the origin of this circle.
+
+=head2 radius
+
+Set/Get the radius of this circle.
+
 =head1 METHODS
 
 =head2 new
@@ -104,10 +117,6 @@ Returns the diameter of this circle
 
 Returns a new circle whose radius is $amount times bigger than this one.
 
-=head2 origin
-
-Set/Get the origin of this circle.
-
 =head2 point_end
 
 Set/Get the "end" point of this cicle.  Calls C<point_start>.
@@ -116,10 +125,6 @@ Set/Get the "end" point of this cicle.  Calls C<point_start>.
 
 Set/Get the "start" point of this cicle.  Returns the point at the circle's
 origin X coordinate and the origin Y coordinate + radius / 2.
-
-=head2 radius
-
-Set/Get the radius of this circle.
 
 =head1 AUTHOR
 

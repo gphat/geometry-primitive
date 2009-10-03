@@ -131,6 +131,16 @@ Geometry::Primitive::Line represents a straight curve defined by two points.
   $line->start($point1);
   $line->end($point2);
 
+=head1 ATTRIBUTES
+
+=head2 end
+
+Set/Get the end point of the line.
+
+=head2 start
+
+Set/Get the start point of the line.
+
 =head1 METHODS
 
 =head2 new
@@ -141,10 +151,6 @@ Creates a new Geometry::Primitive::Line
 
 Returns true if the supplied point is 'on' the line.  Accepts either a point
 object or an x y pair.
-
-=head2 end
-
-Set/Get the end point of the line.
 
 =head2 grow
 
@@ -177,10 +183,6 @@ Does nothing at the moment.
 =head2 slope
 
 Get the slope of the line.
-
-=head2 start
-
-Set/Get the start point of the line.
 
 =head2 to_string
 

@@ -1,6 +1,5 @@
 package Geometry::Primitive::Ellipse;
 use Moose;
-use MooseX::AttributeHelpers;
 use MooseX::Storage;
 
 use Math::Trig ':pi';
@@ -10,11 +9,21 @@ extends 'Geometry::Primitive';
 with qw(Geometry::Primitive::Shape MooseX::Clone);
 with Storage(format => 'JSON', io => 'File');
 
-has 'height' => ( is => 'rw', isa => 'Num', default => sub { 0 });
-has 'origin' => (
-    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+has 'height' => (
+    is => 'rw',
+    isa => 'Num',
+    default => 0
 );
-has 'width' => ( is => 'rw', isa => 'Num', default => sub { 0 });
+has 'origin' => (
+    is => 'rw',
+    isa => 'Geometry::Primitive::Point',
+    coerce => 1
+);
+has 'width' => (
+    is => 'rw',
+    isa => 'Num',
+    default => 0
+);
 
 sub area {
     my ($self) = @_;
@@ -70,6 +79,20 @@ Geometry::Primitive::Ellipse represents an elliptical conic section.
   );
   print $ellipse->area;
 
+=head1 ATTRIBUTES
+
+=head2 height
+
+Set/Get the height of this ellipse.
+
+=head2 origin
+
+Set/Get the origin of this ellipse.
+
+=head2 width
+
+Set/Get the width of this ellipse.
+
 =head1 METHODS
 
 =head2 new
@@ -79,14 +102,6 @@ Creates a new Geometry::Primitive::Ellipse
 =head2 area
 
 Returns the area of this ellipse.
-
-=head2 height
-
-Set/Get the height of this ellipse.
-
-=head2 origin
-
-Set/Get the origin of this ellipse.
 
 =head2 point_end
 
@@ -100,10 +115,6 @@ coordinate is the Ellipse origin X and the origin Y + height / 2.
 =head2 scale ($amount)
 
 Returns a new ellipse whose radius is $amount times bigger than this one.
-
-=head2 width
-
-Set/Get the width of this ellipse.
 
 =head1 AUTHOR
 

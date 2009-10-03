@@ -1,6 +1,5 @@
 package Geometry::Primitive::Arc;
 use Moose;
-use MooseX::AttributeHelpers;
 use MooseX::Storage;
 
 extends 'Geometry::Primitive';
@@ -10,14 +9,26 @@ with Storage(format => 'JSON', io => 'File');
 
 use Geometry::Primitive::Point;
 
-has 'angle_start' => ( is => 'rw', isa => 'Num', required => 1 );
-has 'angle_end' => ( is => 'rw', isa => 'Num', required => 1 );
-has 'origin' => (
-    is => 'rw', isa => 'Geometry::Primitive::Point', coerce => 1
+has 'angle_start' => (
+    is => 'rw',
+    isa => 'Num',
+    required => 1
 );
-has 'radius' => ( is => 'rw', isa => 'Num', required => 1 );
-
-__PACKAGE__->meta->make_immutable;
+has 'angle_end' => (
+    is => 'rw',
+    isa => 'Num',
+    required => 1
+);
+has 'origin' => (
+    is => 'rw',
+    isa => 'Geometry::Primitive::Point',
+    coerce => 1
+);
+has 'radius' => (
+    is => 'rw',
+    isa => 'Num',
+    required => 1
+);
 
 # Area of a sector, if it's ever needed...
 # sub area {
@@ -60,6 +71,8 @@ sub scale {
     $self->radius($self->radius * $amount);
 }
 
+__PACKAGE__->meta->make_immutable;
+
 no Moose;
 1;
 
@@ -83,11 +96,7 @@ Geometry::Primitive::Arc represents a closed segment of a curve.
       radius => 15
   );
 
-=head1 METHODS
-
-=head2 new
-
-Creates a new Geometry::Primitive::Arc
+=head1 ATTRIBUTES
 
 =head2 angle_start
 
@@ -96,6 +105,20 @@ The starting angle for this arc in radians.
 =head2 angle_end
 
 The ending angle for this arc in radians.
+
+=head2 radius
+
+Returns the radius of the arc.
+
+=head2 origin
+
+Set/Get the origin of this arc.
+
+=head1 METHODS
+
+=head2 new
+
+Creates a new Geometry::Primitive::Arc
 
 =head2 get_point_at_angle
 
@@ -106,10 +129,6 @@ undef if the angle falls outside this arc's range.
 
 Returns the length of this arc.
 
-=head2 origin
-
-Set/Get the origin of this arc.
-
 =head2 point_end
 
 Get the end point.  Provided for Shape role.
@@ -117,10 +136,6 @@ Get the end point.  Provided for Shape role.
 =head2 point_start
 
 Get the start point.  Provided for Shape role.
-
-=head2 radius
-
-Returns the radius of the arc.
 
 =head2 scale ($amount)
 

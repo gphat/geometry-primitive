@@ -1,5 +1,10 @@
 Revision history for Geometry-Primitive
 
+0.18    October 3rd, 2009
+  - POD overhaul
+  - Removal of MooseX::AttributeHelpers, using native Moose feature now
+  - Bump Moose dependency
+
 0.17
   - Fix bug in POD
   - Fix Geometry::Primitive not being immutable
