@@ -12,11 +12,11 @@ has 'points' => (
     is => 'rw',
     isa => 'ArrayRef[Geometry::Primitive::Point]',
     default => sub { [] },
-    provides => {
+    handles => {
         add_point   => 'push',
         clear_points=> 'clear',
-        count       => 'point_count',
-        get_point   => 'get'
+        get_point   => 'get',
+        point_count => 'count'
     }
 );
 
