@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.19    November 12th, 2009
+  - Add JSON::Any dep
+
 0.18    October 3rd, 2009
   - POD overhaul
   - Removal of MooseX::AttributeHelpers, using native Moose feature now
