@@ -6,6 +6,8 @@ author   'Cory Watson <gphat@cpan.org>';
 
 build_requires 'Test::More';
 
+test_requires 'JSON::Any' => '1.22';
+
 requires 'Check::ISA' => '0.04';
 requires 'Math::Complex' => '1.56';
 requires 'Moose' => '0.92';
