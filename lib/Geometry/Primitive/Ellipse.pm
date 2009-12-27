@@ -6,8 +6,7 @@ use Math::Trig ':pi';
 
 extends 'Geometry::Primitive';
 
-with qw(Geometry::Primitive::Shape MooseX::Clone);
-with Storage(format => 'JSON', io => 'File');
+with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 has 'height' => (
     is => 'rw',

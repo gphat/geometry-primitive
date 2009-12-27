@@ -5,8 +5,7 @@ use MooseX::Storage;
 
 extends 'Geometry::Primitive';
 
-with qw(Geometry::Primitive::Equal MooseX::Clone);
-with Storage(format => 'JSON', io => 'File');
+with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 use overload ('""' => 'to_string');
 

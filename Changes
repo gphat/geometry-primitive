@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.20    December 27th, 2009
+  - Use MooseX::Storage::Deferred
+
 0.19    November 12th, 2009
   - Add JSON::Any dep
 

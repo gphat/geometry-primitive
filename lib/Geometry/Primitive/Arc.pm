@@ -4,8 +4,7 @@ use MooseX::Storage;
 
 extends 'Geometry::Primitive';
 
-with qw(Geometry::Primitive::Shape MooseX::Clone);
-with Storage(format => 'JSON', io => 'File');
+with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 use Geometry::Primitive::Point;
 
