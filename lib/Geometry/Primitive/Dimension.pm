@@ -1,5 +1,6 @@
 package Geometry::Primitive::Dimension;
 use Moose;
+use Moose::Util::TypeConstraints;
 use MooseX::Storage;
 
 extends 'Geometry::Primitive';
