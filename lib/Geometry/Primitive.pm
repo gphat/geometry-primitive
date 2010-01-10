@@ -2,7 +2,7 @@ package Geometry::Primitive;
 use strict;
 use warnings;
 
-our $VERSION = '0.21';
+our $VERSION = '0.22';
 our $AUTHORITY = 'cpan:GPHAT';
 
 1;

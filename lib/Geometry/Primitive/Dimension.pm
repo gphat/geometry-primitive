@@ -9,11 +9,13 @@ use overload ('""' => 'to_string');
 
 has 'height' => (
     is => 'rw',
-    isa => 'Num'
+    isa => 'Num',
+    default => 0,
 );
 has 'width' => (
     is => 'rw',
-    isa => 'Num'
+    isa => 'Num',
+    default => 0
 );
 
 coerce 'Geometry::Primitive::Dimension'
@@ -43,7 +45,7 @@ Geometry::Primitive::Dimension - A width and height
 
 =head1 DESCRIPTION
 
-Geometry::Primitive::Dimension encapsulates a height and width
+Geometry::Primitive::Dimension encapsulates a height and width.
 
 =head1 SYNOPSIS
 
