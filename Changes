@@ -1,7 +1,9 @@
 Revision history for Geometry-Primitive
 
-0.21
+0.21    January 9th, 2009
   - Add Dimension
+  - De-moosify Graphics::Primitive and stop extending it everywhere, since
+    it's useless.
 
 0.20    December 27th, 2009
   - Use MooseX::Storage::Deferred
