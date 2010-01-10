@@ -11,6 +11,7 @@ lib/Geometry/Primitive.pm
 lib/Geometry/Primitive/Arc.pm
 lib/Geometry/Primitive/Bezier.pm
 lib/Geometry/Primitive/Circle.pm
+lib/Geometry/Primitive/Dimension.pm
 lib/Geometry/Primitive/Ellipse.pm
 lib/Geometry/Primitive/Equal.pm
 lib/Geometry/Primitive/Line.pm
@@ -34,3 +35,4 @@ t/002-rectangle.pm
 t/010-serialize.t
 t/author/pod-coverage.t
 t/author/pod.t
+t/dimension.t
