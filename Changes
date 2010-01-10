@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.21
+  - Add Dimension
+
 0.20    December 27th, 2009
   - Use MooseX::Storage::Deferred
 
