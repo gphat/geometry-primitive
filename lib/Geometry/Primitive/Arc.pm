@@ -2,8 +2,6 @@ package Geometry::Primitive::Arc;
 use Moose;
 use MooseX::Storage;
 
-extends 'Geometry::Primitive';
-
 with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 use Geometry::Primitive::Point;

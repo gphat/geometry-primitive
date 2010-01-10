@@ -1,12 +1,9 @@
 package Geometry::Primitive;
-use Moose;
+use strict;
+use warnings;
 
-our $VERSION = '0.20';
+our $VERSION = '0.21';
 our $AUTHORITY = 'cpan:GPHAT';
-
-__PACKAGE__->meta->make_immutable;
-
-no Moose;
 
 1;
 __END__

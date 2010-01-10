@@ -4,8 +4,6 @@ use MooseX::Storage;
 
 use Math::Trig ':pi';
 
-extends 'Geometry::Primitive';
-
 with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 has 'height' => (

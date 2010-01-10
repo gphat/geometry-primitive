@@ -2,8 +2,6 @@ package Geometry::Primitive::Polygon;
 use Moose;
 use MooseX::Storage;
 
-extends 'Geometry::Primitive';
-
 with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 has 'points' => (

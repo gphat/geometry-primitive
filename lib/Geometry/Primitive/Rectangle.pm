@@ -4,8 +4,6 @@ use MooseX::Storage;
 
 use Geometry::Primitive::Point;
 
-extends 'Geometry::Primitive';
-
 with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
 
 has 'height' => (

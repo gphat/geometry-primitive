@@ -3,8 +3,6 @@ use Moose;
 use Moose::Util::TypeConstraints;
 use MooseX::Storage;
 
-extends 'Geometry::Primitive';
-
 with qw(Geometry::Primitive::Equal MooseX::Clone MooseX::Storage::Deferred);
 
 use overload ('""' => 'to_string');
