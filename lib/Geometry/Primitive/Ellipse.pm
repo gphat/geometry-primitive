@@ -1,10 +1,19 @@
 package Geometry::Primitive::Ellipse;
 use Moose;
 use MooseX::Storage;
+use Moose::Util::TypeConstraints;
 
+use Geometry::Primitive::Point;
 use Math::Trig ':pi';
 
 with qw(Geometry::Primitive::Shape MooseX::Clone MooseX::Storage::Deferred);
+
+subtype 'My::Geometry::Primitive::Point' => as class_type('Geometry::Primitive::Point');
+
+coerce 'My::Geometry::Primitive::Point'
+  => from 'ArrayRef'
+    => via { Geometry::Primitive::Point->new(x => $_->[0], y => $_->[1]) };
+
 
 has 'height' => (
     is => 'rw',
@@ -13,7 +22,7 @@ has 'height' => (
 );
 has 'origin' => (
     is => 'rw',
-    isa => 'Geometry::Primitive::Point',
+    isa => 'My::Geometry::Primitive::Point',
     coerce => 1
 );
 has 'width' => (
