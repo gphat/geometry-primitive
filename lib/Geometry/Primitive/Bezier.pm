@@ -72,6 +72,8 @@ no Moose;
 
 __END__
 
+=encoding UTF-8
+
 =head1 NAME
 
 Geometry::Primitive::Bezier - Cubic Bézier Curve
