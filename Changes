@@ -1,5 +1,8 @@
 Revision history for Geometry-Primitive
 
+0.24    February 16, 2014
+  - Apply encoding patch from Debian
+
 0.22    January 9th, 2009
   - Default Dimension width and height to 0
 
